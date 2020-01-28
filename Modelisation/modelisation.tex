@@ -12,7 +12,7 @@
 % blanc de grand fond = 3/5 (21-15) = outer = left
 % blanc de tête = 2/5 (29,7-23) = top
 % blanc de pied = 3/5 (29,7-23) = bottom
-%\usepackage[a4paper,twoside=true,right=2.4cm,left=3.6cm,top=2.68cm,bottom=4.02cm]{geometry} 
+%\usepackage[a4paper,twoside=true,right=2.4cm,left=3.6cm,top=2.68cm,bottom=4.02cm]{geometry}
 % selon CFSE 2006
 % - largeur des textes (ou justification) : 16cm (2cm de marge, et 1cm
 %   de reliure) ;
@@ -72,7 +72,7 @@
 
 \begin{document}
 \title{Projet CSC4102: Gestion des clefs dans un hôtel}
-\author{Nom Prénom Étudiant1 et Nom Prénom Étudiants2}
+\author{DUBOC Aurélien et ZHEN Alice}
 \date{Année 2019--2020~---~\today}
 \maketitle
 
@@ -143,11 +143,51 @@ indiquons uniquement leur niveau de priorité.
 
 \smallskip
 
-\priorityusecase{\basse}{Retirer une chambre}
+\usecase{\haute}{Initialiser les serrures}
+        %% précondition
+        {chambre créée par l'administrateur $\land$ graine et sel utilisés pour la génération des clefs de la chambre obtenus auprès du système}
+        %% postcondition
+        {les deux clefs de la serrure sont initialisées}
+
+\smallskip
+
+\usecase{\haute}{Créer les nouveaux clients}
+        %% précondition
+        {première visite du client $\land$ informations personnelles obligatoires bien fournies par le client}
+        %% postcondition
+        {client existant dans le système}
+
+\smallskip
+
+\usecase{\haute}{Créer les badges d'accès}
+        %% précondition
+        {identifiant du badge bien formé}
+        %% postcondition
+        {badge d'accès créé}
+
+\smallskip
+
+\priorityusecase{\moyenne}{Fournir les badges d'accès}
+
+\smallskip
+
+\priorityusecase{\moyenne}{Enregistrer l'occupation d'une chambre par un client}
 
 \smallskip
 
 \priorityusecase{\moyenne}{Lister les chambres}
+
+\smallskip
+
+\priorityusecase{\basse}{Enregistrer le départ d'un client}
+
+\smallskip
+
+\priorityusecase{\basse}{Retirer une chambre}
+
+\smallskip
+
+\priorityusecase{\basse}{Effacer les clefs sur les badges d'accès rendus}
 \end{compactitem}
 
 \newpage
@@ -185,7 +225,7 @@ Création acceptée
 &F&F&F&T\\
 \hline
 \hline
-Nombre de jeux de test 
+Nombre de jeux de test
 &2&2&1&1\\
 \hline
 \end{tabular}
@@ -242,7 +282,7 @@ attributs:
 \subsection{Classe \textsf{GestionClefsHotel}}
 
 \begin{center}
-\begin{longtable}{|p{15cm}|} 
+\begin{longtable}{|p{15cm}|}
 \hline
 \multicolumn{1}{|c|}{{\Large \textsf{GestionClefsHotel}}} \\
 \hline
@@ -257,7 +297,7 @@ $+$ invariant():booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ créerChambre(String code, String graine) \\
 %\cmt{opérations de recherche} \\
-\hline  
+\hline
 \end{longtable}%)
 \end{center}
 
