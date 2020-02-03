@@ -135,7 +135,7 @@ indiquons uniquement leur niveau de priorité.
 \usecase{\haute}{Créer une chambre}
         %% précondition
         {identifiant/code de la chambre bien formé (non \nullvalue et non
-          vide) $\land$ chambre avec ce code inexistante $\land$
+          vide) $\land$ chambre avec cet identifiant inexistante $\land$
           graine pour la génération des clefs bien formée (non
           \nullvalue et non vide)}
         %% postcondition
@@ -145,7 +145,7 @@ indiquons uniquement leur niveau de priorité.
 
 \usecase{\haute}{Initialiser les serrures}
         %% précondition
-        {chambre créée par l'administrateur $\land$ graine et sel utilisés pour la génération des clefs de la chambre obtenus auprès du système}
+        {chambre créée par l'administrateur $\land$ graine et sel utilisés pour la génération des clefs de la chambre bien formés (non \nullvalue et non vide)}
         %% postcondition
         {les deux clefs de la serrure sont initialisées}
 
@@ -153,7 +153,7 @@ indiquons uniquement leur niveau de priorité.
 
 \usecase{\haute}{Créer les nouveaux clients}
         %% précondition
-        {première visite du client $\land$ informations personnelles obligatoires bien fournies par le client}
+        {client n'existe pas dans le système $\land$ informations personnelles bien formées (non \nullvalue et non vide)}
         %% postcondition
         {client existant dans le système}
 
@@ -161,7 +161,7 @@ indiquons uniquement leur niveau de priorité.
 
 \usecase{\haute}{Créer les badges d'accès}
         %% précondition
-        {identifiant du badge bien formé}
+        {identifiant du badge bien formé (non \nullvalue et non vide)}
         %% postcondition
         {badge d'accès créé}
 
@@ -232,6 +232,61 @@ Nombre de jeux de test
 \caption{Cas d'utilisation <<~créer une chambre~>>}
 \end{table}
 
+\begin{table}[htbp!]
+\begin{tabular}{|p{0.6\linewidth}|c|c|c|c|}
+\hline
+Numéro de test
+&1&2&3&4\\
+\hline
+\hline
+Client existant dans le système
+&F&T&T&T\\
+\hline
+Chambre existante avec ce code
+& &F&T&T\\
+\hline
+Chambre avec ce code inoccupée
+& & &F&T\\
+\hline
+\hline
+Client enregistré dans la chambre
+&F&F&F&T\\
+\hline
+\hline
+Nombre de jeux de test
+&1&1&1&1\\
+\hline
+\end{tabular}
+\caption{Cas d'utilisation <<~enregistrer l'occupation d'une chambre par un client~>>}
+\end{table}
+
+\begin{table}[htbp!]
+\begin{tabular}{|p{0.6\linewidth}|c|c|c|c|}
+\hline
+Numéro de test
+&1&2&3&4\\
+\hline
+\hline
+Client existant dans le système
+&F&T&T&T\\
+\hline
+Chambre existante avec ce code
+& &F&T&T\\
+\hline
+Chambre avec ce code occupée par ce client
+& & &F&T\\
+\hline
+\hline
+Chambre libérée
+&F&F&F&T\\
+\hline
+\hline
+Nombre de jeux de test
+&1&1&1&1\\
+\hline
+\end{tabular}
+\caption{Cas d'utilisation <<~libérer une chambre~>>}
+\end{table}
 \newpage
 
 \section{Conception}
