@@ -14,3 +14,30 @@ exposer votre point de vue.
 - [x] Action (réalisée)
     - RÉPONSE et éventuelles remarques de votre part, 
 
+
+# Suivi du mar. 04 févr. 2020 00:00:40 CET séance 2 
+Chantal Taconet
+
+Bon travail ! Voici quelques remarques merci d'indiquer que vous les avez prises en compte.
+
+Bon début mais un peu de retard ! Voici quelques remarques merci d'indiquer que vous les avez prises en compte.
+
+Bon début mais des choses à revoir ! Voici quelques remarques merci d'indiquer que vous les avez prises en compte.
+
+## Git 
+- Bons commentaires de commit
+- Ce serait bien que les deux binomes fassent des commit
+
+## Modelisation.pdf
+- [] Page 1 : Mettre à jour le nom et prénom des étudiants
+- Diagramme de cas d'utilisation : OK 
+    - [] Créer les nouveaux clients --> créer un nouveau client 
+    - [] Revoir le cas initialiser la serrure, en réfléchissant ce qu'a à faire le gérant de la chambre avec votre système pour pouvoir utiliser les serrures 
+- Priorités, préconditions et postconditions 
+    - [] Revoir Initialiser les serrures 
+    - [] Manque enregistrer l'occupation d'une chambre 
+    - [] Prévoir un état du badge après sa création(accueil, client)
+- Tables de décisions 
+  - [] Revoir les tables de décision, pour tous les cas d'utilisation, le système reçoit des chaines de caractère et il faut vérifier qu'elles soient  (non null ^ non vide)
+
+---
