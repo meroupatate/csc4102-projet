@@ -143,15 +143,7 @@ indiquons uniquement leur niveau de priorité.
 
 \smallskip
 
-\usecase{\haute}{Initialiser les serrures}
-        %% précondition
-        {chambre créée par l'administrateur $\land$ graine et sel utilisés pour la génération des clefs de la chambre bien formés (non \nullvalue et non vide)}
-        %% postcondition
-        {les deux clefs de la serrure sont initialisées}
-
-\smallskip
-
-\usecase{\haute}{Créer les nouveaux clients}
+\usecase{\haute}{Créer un nouveau client}
         %% précondition
         {client n'existe pas dans le système $\land$ informations personnelles bien formées (non \nullvalue et non vide)}
         %% postcondition
@@ -167,11 +159,15 @@ indiquons uniquement leur niveau de priorité.
 
 \smallskip
 
-\priorityusecase{\moyenne}{Fournir les badges d'accès}
+\usecase{\haute}{Enregistrer l'occupation d'une chambre par un client}
+        %% précondition
+        {client existant dans le système $\land$ chambre existante avec ce code $\land$ chambre avec ce code inoccupée}
+        %% postcondition
+	{client enregistré dans la chambre $\land$ écriture de la nouvelle paire de clés dans le badge d'accès}
 
 \smallskip
 
-\priorityusecase{\moyenne}{Enregistrer l'occupation d'une chambre par un client}
+\priorityusecase{\moyenne}{Fournir les badges d'accès}
 
 \smallskip
 
@@ -233,56 +229,68 @@ Nombre de jeux de test
 \end{table}
 
 \begin{table}[htbp!]
-\begin{tabular}{|p{0.6\linewidth}|c|c|c|c|}
+\begin{tabular}{|p{0.6\linewidth}|c|c|c|c|c|c|}
 \hline
 Numéro de test
-&1&2&3&4\\
+&1&2&3&4&5&6\\
 \hline
 \hline
 Client existant dans le système
-&F&T&T&T\\
+&F&T&T&T&T&T\\
+\hline
+Informations du client bien formées (non \nullvalue et non vide)
+& &F&T&T&T&T\\
+\hline
+Code de la chambre bien formé (non \nullvalue et non vide)
+& & &F&T&T&T\\
 \hline
 Chambre existante avec ce code
-& &F&T&T\\
+& & & &F&T&T\\
 \hline
 Chambre avec ce code inoccupée
-& & &F&T\\
+& & & & &F&T\\
 \hline
 \hline
 Client enregistré dans la chambre
-&F&F&F&T\\
+&F&F&F&F&F&T\\
 \hline
 \hline
 Nombre de jeux de test
-&1&1&1&1\\
+&1&2xn&2&1&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~enregistrer l'occupation d'une chambre par un client~>>}
 \end{table}
 
 \begin{table}[htbp!]
-\begin{tabular}{|p{0.6\linewidth}|c|c|c|c|}
+\begin{tabular}{|p{0.6\linewidth}|c|c|c|c|c|c|}
 \hline
 Numéro de test
-&1&2&3&4\\
+&1&2&3&4&5&6\\
 \hline
 \hline
 Client existant dans le système
-&F&T&T&T\\
+&F&T&T&T&T&T\\
+\hline
+Informations du client bien formées (non \nullvalue et non vide)
+& &F&T&T&T&T\\
+\hline
+Code de la chambre bien formé (non \nullvalue et non vide)
+& & &F&T&T&T\\
 \hline
 Chambre existante avec ce code
-& &F&T&T\\
+& & & &F&T&T\\
 \hline
 Chambre avec ce code occupée par ce client
-& & &F&T\\
+& & & & &F&T\\
 \hline
 \hline
 Chambre libérée
-&F&F&F&T\\
+&F&F&F&F&F&T\\
 \hline
 \hline
 Nombre de jeux de test
-&1&1&1&1\\
+&1&2xn&2&1&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~libérer une chambre~>>}
