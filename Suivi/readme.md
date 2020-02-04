@@ -20,9 +20,6 @@ Chantal Taconet
 
 Bon travail ! Voici quelques remarques merci d'indiquer que vous les avez prises en compte.
 
-Bon début mais un peu de retard ! Voici quelques remarques merci d'indiquer que vous les avez prises en compte.
-
-Bon début mais des choses à revoir ! Voici quelques remarques merci d'indiquer que vous les avez prises en compte.
 
 ## Git 
 - Bons commentaires de commit
