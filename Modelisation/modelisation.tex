@@ -86,8 +86,6 @@
 
 \subsection{Diagrammes de cas d'utilisation}
 
-{\color{red}\textbf{Le diagramme suivant est à compléter.}}
-
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.5]{DiagrammesDeCasDUtilisation/gestionclefshotel_uml_diag_cas_utilisation}
@@ -128,8 +126,6 @@ les cas d'utilisation de priorité <<~\haute~>>. Pour les autres, nous
 indiquons uniquement leur niveau de priorité.
 
 \bigskip
-
-{\color{red}\textbf{La précondition suivante est à compléter.}}
 
 \begin{compactitem}
 \usecase{\haute}{Créer une chambre}
@@ -196,9 +192,6 @@ La fiche programme du module CSC4102 ne permettant pas de développer
 des tests de validation couvrant l'ensemble des cas d'utilisation de
 l'application, les cas d'utilisation choisis sont de priorité
 \textsc{Haute}.
-
-{\color{red}\textbf{La section est à compléter avec les tables de
-    décision d'autres cas d'utilisation.}}
 
 \begin{table}[htbp!]
 \begin{tabular}{|p{0.6\linewidth}|c|c|c|c|}
@@ -301,17 +294,15 @@ Nombre de jeux de test
 
 \subsection{Liste des classes}
 
-{\color{red}\textbf{La liste des classes suivante est à compléter.}}
-
 À la suite d'un parcours des diagrammes de cas d'utilisation et d'une
 relecture de l'étude de cas, voici la liste de classes avec quelques
 attributs:
 \begin{compactitem}
 \item \textsf{GestionClefsHotel} (la façade),
-\item \textsf{Chambre}~---~ identifiant, graine,
 \item \textsf{Util} (classe utilitaire déjà programmée)~---~'attribut
   de classe \textsf{TAILLE\_CLEF}, méthodes de classe
   \textsf{genererUneNouvelleClef} et \textsf{clefToString}),
+\item \textsf{Clef} hash
 \item \textsf{Badge} identifiant, premiereClef, secondeClef
 \item \textsf{Client} identifiant, nom, prénom
 \item \textsf{Chambre} identifiant, premiereClef, secondeClef, graine, sel
@@ -319,8 +310,6 @@ attributs:
 \newpage
 
 \subsection{Diagramme de classes}
-
-{\color{red}\textbf{Le diagramme de classes suivant est à compléter.}}
 
 \begin{figure}[h!]
 \begin{center}
@@ -334,7 +323,29 @@ attributs:
 
 \subsection{Diagrammes de séquence}
 
-{\color{red}\textbf{La section est à compléter avec les diagrammes de séquence de vos cas d'utilisation les plus importants.}}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.5]{DiagrammesDeSequence/gestionclefshotel_uml_diag_seq_creer_chambre}
+\caption{Diagramme de séquence <<~créer une chambre~>>}
+\end{center}
+\label{umlet_diag_classes}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.3]{DiagrammesDeSequence/gestionclefshotel_uml_diag_seq_enregistrer_occupation_chambre_client}
+\caption{Diagramme de séquence <<~enregistrer l'occupation d'une chambre par un client~>>}
+\end{center}
+\label{umlet_diag_classes}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.5]{DiagrammesDeSequence/gestionclefshotel_uml_diag_seq_liberer_chambre}
+\caption{Diagramme de séquence <<~libérer une chambre~>>}
+\end{center}
+\label{umlet_diag_classes}
+\end{figure}
 
 \newpage
 
