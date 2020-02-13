@@ -46,7 +46,8 @@ Bon travail ! Voici quelques remarques merci d'indiquer que vous les avez prises
 # Suivi du mer. 12 févr. 2020 15:38:28 CET
 Elisabeth Brunet
 
-- [] Les éléments travaillés lors de la séance 3 n'apparaissent pas dans le fichier modelisation.pdf, je ne peux donc pas faire de suivi. 
+- [x] Les éléments travaillés lors de la séance 3 n'apparaissent pas dans le fichier modelisation.pdf, je ne peux donc pas faire de suivi.
+--> retard rattrapé au niveau de la séance 3
 
 
 ---
