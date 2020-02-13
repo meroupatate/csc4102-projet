@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>90</y>
-      <w>240</w>
-      <h>80</h>
+      <x>288</x>
+      <y>112</y>
+      <w>352</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>GestionClefsHotel
 --
-</panel_attributes>
++creerChambre(int id, String graine, int sel)
++creerClient(int id, String nom, String prenom)
++creerBadge(int id)
++rechercheChambre(int id)
++rechercheClient(int id)
++rechercheBadge(int id)
++enregistrerOccupationChambreClient(Chambre chambre, Client client)
++libererChambre(Chambre chambre)
++renouvelerClefsChambre(Chambre chambre)
++initialiserBadge(Badge badge, Chambre chambre)
++effacerClefsBadge(Badge badge)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>380</x>
-      <y>160</y>
-      <w>40</w>
-      <h>130</h>
+      <x>448</x>
+      <y>272</y>
+      <w>24</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=*</panel_attributes>
@@ -29,10 +39,10 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>90</y>
-      <w>350</w>
-      <h>100</h>
+      <x>320</x>
+      <y>16</y>
+      <w>280</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Util
 --
@@ -45,16 +55,132 @@ _+clefToString(byte[] clef): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>270</y>
-      <w>190</w>
-      <h>110</h>
+      <x>336</x>
+      <y>360</y>
+      <w>328</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Chambre
 --
-code:String
-graine:String
-sel:int</panel_attributes>
+id: int
+graine: String
+sel: int
+premiereClef: Clef
+secondeClef: Clef
+--
++constructeur(int id, String graine, int sel)
++liberer()
++renouvelerClefs()
+</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>384</y>
+      <w>232</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Client
+--
+id: int
+nom: String
+prenom: String
+--
++constructeur(int id, String nom, String prenom)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>360</y>
+      <w>264</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Badge
+--
+id: int
+premiereClef: Clef
+secondeClef: Clef
+--
++constructeur(int id)
++inscrireClefs(byte[] premiereClef, byte[] secondeClef)
++effacerClefs()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>136</y>
+      <w>160</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=*</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>144</y>
+      <w>232</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;10.0;270.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>512</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Clef
+--
+hash: byte[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>392</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ouvre
+0..n    0..1</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>400</y>
+      <w>32</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=2</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>656</x>
+      <y>400</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>est occupée par
+0..1             0..1</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
 </diagram>
