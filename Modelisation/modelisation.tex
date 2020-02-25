@@ -451,14 +451,86 @@ $+$ libérer() \\
 \label{umlet_diag_classes}
 \end{figure}
 
-\textbf{Invariant de la classe Badge:} en attente || attribué
+\textbf{Invariant de la classe Badge:} /enAttente || /estAttribué
 
 \newpage
 
 \section{Préparation des tests unitaires}
 
-{\color{red}\textbf{La section est à compléter avec les tables de
-    décision de certaines méthodes des classes les plus importantes.}}
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{|p{0.4\linewidth}|c|c|c|}
+\hline
+Numéro de test
+&1&2&3\\
+\hline
+\hline
+Identifiant du badge bien formé $\neq \nullvalue \land \neg \emptyvalue$
+&F&T&T\\
+\hline
+Badge inexistant avec cet identifiant
+& &F&T\\
+\hline
+\hline
+$/enAttente = true$
+& & &T\\
+\hline
+$/estAttribue = false$
+& & &T\\
+\hline
+$\invariant$
+& & &T\\
+\hline
+Levée d'une exception&\textsc{oui}&\textsc{oui}&\textsc{non}\\
+\hline
+\hline
+Création du badge acceptée
+&F&F&T\\
+\hline
+\hline
+Nombre de jeux de test
+&2&n&1\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Table de décision des opérations pour Badge <<~constructeur~>>}
+\end{table}
+
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{|p{0.4\linewidth}|c|c|}
+\hline
+Numéro de test
+&1&2\\
+\hline
+\hline
+/enAttente
+&F&T\\
+\hline
+\hline
+$/enAttente = false$
+& &T\\
+\hline
+$/estAttribue = true$
+& &T\\
+\hline
+$\invariant$
+& &T\\
+\hline
+Levée d'une exception&\textsc{oui}&\textsc{non}\\
+\hline
+\hline
+Attribution du badge confirmée
+&F&T\\
+\hline
+\hline
+Nombre de jeux de test
+&1&1\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Table de décision des opérations pour Badge <<~estAttribué~>>}
+\end{table}
 
 
 \end{document}
