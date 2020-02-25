@@ -51,3 +51,20 @@ Elisabeth Brunet
 
 
 ---
+
+# Suivi du mar. 25 févr. 2020 22:14:39 CET
+Elisabeth Brunet
+
+Bon travail avec des précisions à apporter et à achever.
+
+- [] Diagramme de classes
+    - [] Vous avez encore des associations qui ne sont pas traduites avec des relations d'agrégation/composition.
+- [] Fiche des classes
+    - [] Je n'ai pas regardé en détail mais cela me semble sur la bonne voie
+    - [] "au plus une clé" -> que voulez-vous indiquer? 
+- [] Diagramme de machine à états
+    - [] Pour badge, il manque l'état "en destruction"
+    - [] Invariant : vous avez rédigé la partie de l'invariant portant sur l'état du badge. Il manque la partie de l'invariant sur l'attribut id. Il faut qu'il soit non null et non vide.
+    
+
+---
