@@ -351,10 +351,6 @@ attributs:
 
 \section{Fiche des classes}
 
-{\color{red}\textbf{La section est à compléter avec les fiches de vos
-    classes les plus importantes. La première fiche, celle de la
-    façade, est aussi à compléter.}}
-
 \subsection{Classe \textsf{GestionClefsHotel}}
 
 \begin{center}
@@ -365,18 +361,84 @@ attributs:
 %\cmt{attributs}\\
 \cmt{attributs <<~association~>>}\\
 $-$ chambres : collection de @Chambre \\
+$-$ clients : collection de @Client \\
+$-$ badges : collection de @Badge \\
 \hline
 \cmt{constructeur} \\
 $+$ GestionClefsHotel()\\
 %$+$ destructeur()\\
 $+$ invariant():booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
-$+$ créerChambre(String code, String graine) \\
-%\cmt{opérations de recherche} \\
+$+$ créerChambre(int id, String graine, int sel) \\
+$+$ créerClient(int id, String nom, String prenom) \\
+$+$ créerBadge(int id) \\
+$+$ enregistrerOccupationChambreClient(Chambre chambre, Client client, Badge badge) \\
+$+$ libérerChambre(Chambre chambre) \\
+$+$ renouvelerClefs(Chambre chambre) \\
+$+$ initialiserBadge(Badge badge, Chambre chambre) \\
+\cmt{opérations de recherche} \\
+$+$ rechercheChambre(int id) \\
+$+$ rechercheClient(int id) \\
+$+$ rechercheBadge(int id) \\
 \hline
 \end{longtable}%)
 \end{center}
 
+\subsection{Classe \textsf{Badge}}
+
+\begin{center}
+\begin{longtable}{|p{15cm}|}
+\hline
+\multicolumn{1}{|c|}{{\Large \textsf{Badge}}} \\
+\hline
+%\cmt{attributs}\\
+\cmt{attributs}\\
+$-$ id : int \\
+$-$ premiereClef : au plus une @Clef \\
+$-$ secondeClef : au plus une @Clef \\
+\hline
+\cmt{constructeur} \\
+$+$ Badge()\\
+%$+$ destructeur()\\
+$+$ invariant():booléen\\
+\cmt{operations <<~cas d'utilisation~>>} \\
+$+$ inscrireClefs(Clef premiereClef, Clef secondeClef) \\
+$+$ effacerClefs() \\
+\hline
+\end{longtable}%)
+\end{center}
+\newpage
+
+\subsection{Classe \textsf{Chambre}}
+
+\begin{center}
+\begin{longtable}{|p{15cm}|}
+\hline
+\multicolumn{1}{|c|}{{\Large \textsf{Chambre}}} \\
+\hline
+%\cmt{attributs}\\
+\cmt{attributs}\\
+$-$ id : int \\
+$-$ graine : String \\
+$-$ sel : int \\
+$-$ premiereClef : au plus une @Clef \\
+$-$ secondeClef : au plus une @Clef \\
+\cmt{attributs <<~association~>>}\\
+$-$ badge : au plus un @Badge \\
+$-$ client : au plus un @Client \\
+\hline
+\cmt{constructeur} \\
+$+$ Chambre()\\
+%$+$ destructeur()\\
+$+$ invariant():booléen\\
+\cmt{operations <<~cas d'utilisation~>>} \\
+$+$ renouvelerClefs(Clef nouvelleClef) \\
+$+$ associerClient(Client client) \\
+$+$ associerBadge(Badge badge) \\
+$+$ libérer() \\
+\hline
+\end{longtable}%)
+\end{center}
 \newpage
 
 \section{Diagrammes de machine à états et invariants}
