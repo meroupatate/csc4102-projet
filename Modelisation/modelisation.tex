@@ -367,7 +367,7 @@ $-$ badges : collection de @Badge \\
 \cmt{constructeur} \\
 $+$ GestionClefsHotel()\\
 %$+$ destructeur()\\
-$+$ invariant():booléen\\
+$+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ créerChambre(int id, String graine, int sel) \\
 $+$ créerClient(int id, String nom, String prenom) \\
@@ -394,13 +394,13 @@ $+$ rechercheBadge(int id) \\
 %\cmt{attributs}\\
 \cmt{attributs}\\
 $-$ id : int \\
-$-$ premiereClef : au plus une @Clef \\
-$-$ secondeClef : au plus une @Clef \\
+$-$ premiereClef : @Clef \\
+$-$ secondeClef : @Clef \\
 \hline
 \cmt{constructeur} \\
 $+$ Badge()\\
 %$+$ destructeur()\\
-$+$ invariant():booléen\\
+$+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ inscrireClefs(Clef premiereClef, Clef secondeClef) \\
 $+$ effacerClefs() \\
@@ -421,16 +421,16 @@ $+$ effacerClefs() \\
 $-$ id : int \\
 $-$ graine : String \\
 $-$ sel : int \\
-$-$ premiereClef : au plus une @Clef \\
-$-$ secondeClef : au plus une @Clef \\
+$-$ premiereClef : @Clef \\
+$-$ secondeClef : @Clef \\
 \cmt{attributs <<~association~>>}\\
-$-$ badge : au plus un @Badge \\
-$-$ client : au plus un @Client \\
+$-$ badge : @Badge \\
+$-$ client : @Client \\
 \hline
 \cmt{constructeur} \\
 $+$ Chambre()\\
 %$+$ destructeur()\\
-$+$ invariant():booléen\\
+$+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ renouvelerClefs(Clef nouvelleClef) \\
 $+$ associerClient(Client client) \\
