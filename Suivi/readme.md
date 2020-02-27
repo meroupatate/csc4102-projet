@@ -57,8 +57,9 @@ Elisabeth Brunet
 
 Bon travail avec des précisions à apporter et à achever.
 
-- [] Diagramme de classes
-    - [] Vous avez encore des associations qui ne sont pas traduites avec des relations d'agrégation/composition.
+- [x] Diagramme de classes
+    - [x] Vous avez encore des associations qui ne sont pas traduites avec des relations d'agrégation/composition.
+    --> relations d'agrégations ajoutées au diagramme de classes entre Chambre/Badge et Chambre/Client
 - [] Fiche des classes
     - [] Je n'ai pas regardé en détail mais cela me semble sur la bonne voie
     - [] "au plus une clé" -> que voulez-vous indiquer? 

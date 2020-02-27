@@ -54,9 +54,9 @@ _+clefToString(byte[] clef): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
+      <x>392</x>
       <y>360</y>
-      <w>328</w>
+      <w>296</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>Chambre
@@ -152,13 +152,13 @@ hash: byte[]</panel_attributes>
     <coordinates>
       <x>280</x>
       <y>392</y>
-      <w>120</w>
+      <w>128</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
 est ouverte par
 0..n            0..1</panel_attributes>
-    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -175,14 +175,14 @@ m1=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>704</x>
+      <x>680</x>
       <y>400</y>
-      <w>112</w>
+      <w>136</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
 est occupée par
 0..1             0..1</panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
   </element>
 </diagram>

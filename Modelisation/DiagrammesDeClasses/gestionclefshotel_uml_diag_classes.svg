@@ -18,7 +18,7 @@
       ><path d="M0 0 L0 110 L290 110 L290 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath5"
-      ><path d="M0 0 L0 190 L410 190 L410 0 Z"
+      ><path d="M0 0 L0 190 L370 190 L370 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath6"
       ><path d="M0 0 L0 100 L350 100 L350 0 Z"
@@ -27,13 +27,13 @@
       ><path d="M0 0 L0 210 L530 210 L530 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath8"
-      ><path d="M0 0 L0 50 L140 50 L140 0 Z"
+      ><path d="M0 0 L0 50 L170 50 L170 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
       ><path d="M0 0 L0 170 L40 170 L40 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M0 0 L0 50 L150 50 L150 0 Z"
+      ><path d="M0 0 L0 50 L160 50 L160 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M0 0 L0 320 L200 320 L200 0 Z"
@@ -96,14 +96,14 @@
       /><text x="5" font-size="14px" y="88.9531" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+constructeur(int id, String nom, String prenom)</text
     ></g
-    ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(480,450)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><rect x="0.5" width="408.5" height="188.5" y="0.5" clip-path="url(#clipPath5)" stroke="none"
+    ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(490,450)" stroke-opacity="0" stroke="rgb(255,255,255)"
+    ><rect x="0.5" width="368.5" height="188.5" y="0.5" clip-path="url(#clipPath5)" stroke="none"
     /></g
-    ><g transform="translate(480,450)"
-    ><rect fill="none" x="0.5" width="408.5" height="188.5" y="0.5" clip-path="url(#clipPath5)"
-      /><text x="178" font-size="14px" y="17.3906" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><g transform="translate(490,450)"
+    ><rect fill="none" x="0.5" width="368.5" height="188.5" y="0.5" clip-path="url(#clipPath5)"
+      /><text x="158" font-size="14px" y="17.3906" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Chambre</text
-      ><path fill="none" d="M1 23.3906 L409 23.3906" clip-path="url(#clipPath5)"
+      ><path fill="none" d="M1 23.3906 L369 23.3906" clip-path="url(#clipPath5)"
       /><text x="5" font-size="14px" y="37.7812" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >- id: int</text
       ><text x="5" font-size="14px" y="53.1719" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
@@ -114,7 +114,7 @@
       >- premiereClef: Clef</text
       ><text x="5" font-size="14px" y="99.3438" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >- secondeClef: Clef</text
-      ><path fill="none" d="M1 105.3438 L409 105.3438" clip-path="url(#clipPath5)"
+      ><path fill="none" d="M1 105.3438 L369 105.3438" clip-path="url(#clipPath5)"
       /><text x="5" font-size="14px" y="119.7344" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+constructeur(int id, String graine, int sel)</text
       ><text x="5" font-size="14px" y="135.125" clip-path="url(#clipPath5)" font-family="sans-serif" stroke="none" xml:space="preserve"
@@ -171,12 +171,14 @@
       ><text x="5" font-size="14px" y="176.2969" clip-path="url(#clipPath7)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+initialiserBadge(Badge badge, Chambre chambre)</text
     ></g
-    ><g transform="translate(880,500)"
-    ><path fill="none" d="M10.5 20.5 L119.5 20.5" clip-path="url(#clipPath8)"
-      /><path fill="none" d="M108.7417 27 L120 20.5 L108.7417 14" clip-path="url(#clipPath8)"
-      /><text x="20.4126" font-size="14px" y="16" clip-path="url(#clipPath8)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><g transform="translate(850,500)"
+    ><path fill="none" d="M11.5 20.5 L150.5 20.5" clip-path="url(#clipPath8)"
+      /><path fill="white" d="M22.2583 27 L11 20.5 L22.2583 14 L33.0167 20.5 Z" clip-path="url(#clipPath8)" stroke="none"
+      /><path fill="none" d="M22.2583 27 L11 20.5 L22.2583 14 L33.0167 20.5 Z" clip-path="url(#clipPath8)"
+      /><path fill="none" d="M138.7417 27 L150 20.5 L138.7417 14" clip-path="url(#clipPath8)"
+      /><text x="35.4126" font-size="14px" y="16" clip-path="url(#clipPath8)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >est occupée par</text
-      ><text x="23.082" font-size="14px" y="31.3906" clip-path="url(#clipPath8)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      ><text x="38.082" font-size="14px" y="31.3906" clip-path="url(#clipPath8)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >0..1             0..1</text
     ></g
     ><g transform="translate(410,500)"
@@ -185,11 +187,13 @@
       >2</text
     ></g
     ><g transform="translate(350,490)"
-    ><path fill="none" d="M11.5 20.5 L130.5 20.5" clip-path="url(#clipPath10)"
+    ><path fill="none" d="M11.5 20.5 L140.5 20.5" clip-path="url(#clipPath10)"
       /><path fill="none" d="M22.2583 27 L11 20.5 L22.2583 14" clip-path="url(#clipPath10)"
-      /><text x="26.978" font-size="14px" y="16" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      /><path fill="white" d="M128.7417 27 L140 20.5 L128.7417 14 L117.9833 20.5 Z" clip-path="url(#clipPath10)" stroke="none"
+      /><path fill="none" d="M128.7417 27 L140 20.5 L128.7417 14 L117.9833 20.5 Z" clip-path="url(#clipPath10)"
+      /><text x="31.978" font-size="14px" y="16" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >est ouverte par</text
-      ><text x="29.3159" font-size="14px" y="31.3906" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      ><text x="34.3159" font-size="14px" y="31.3906" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >0..n            0..1</text
     ></g
     ><g transform="translate(940,180)"
