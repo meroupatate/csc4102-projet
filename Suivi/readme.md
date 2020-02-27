@@ -64,9 +64,11 @@ Bon travail avec des précisions à apporter et à achever.
     - [x] Je n'ai pas regardé en détail mais cela me semble sur la bonne voie
     - [x] "au plus une clé" -> que voulez-vous indiquer?
     --> on voulait indiquer qu'il était possible qu'il y ait zéro ou une clé mais finalement il y a toujours une clé donc on a enlevé la précision inutile 
-- [] Diagramme de machine à états
-    - [] Pour badge, il manque l'état "en destruction"
-    - [] Invariant : vous avez rédigé la partie de l'invariant portant sur l'état du badge. Il manque la partie de l'invariant sur l'attribut id. Il faut qu'il soit non null et non vide.
+- [x] Diagramme de machine à états
+    - [x] Pour badge, il manque l'état "en destruction"
+    --> ajout de l'état "en destruction"
+    - [x] Invariant : vous avez rédigé la partie de l'invariant portant sur l'état du badge. Il manque la partie de l'invariant sur l'attribut id. Il faut qu'il soit non null et non vide.
+    --> ajout de la condition id non null et non vide
     
 
 ---

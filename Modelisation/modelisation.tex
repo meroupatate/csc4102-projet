@@ -391,21 +391,20 @@ $+$ rechercheBadge(int id) \\
 \hline
 \multicolumn{1}{|c|}{{\Large \textsf{Badge}}} \\
 \hline
-%\cmt{attributs}\\
 \cmt{attributs}\\
 $-$ id : int \\
 $-$ premiereClef : @Clef \\
 $-$ secondeClef : @Clef \\
 \hline
 \cmt{constructeur} \\
-$+$ Badge()\\
-%$+$ destructeur()\\
+$+$ Badge(int id)\\
+$+$ destructeur()\\
 $+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ inscrireClefs(Clef premiereClef, Clef secondeClef) \\
 $+$ effacerClefs() \\
 \hline
-\end{longtable}%)
+\end{longtable}
 \end{center}
 \newpage
 
@@ -416,7 +415,6 @@ $+$ effacerClefs() \\
 \hline
 \multicolumn{1}{|c|}{{\Large \textsf{Chambre}}} \\
 \hline
-%\cmt{attributs}\\
 \cmt{attributs}\\
 $-$ id : int \\
 $-$ graine : String \\
@@ -428,8 +426,8 @@ $-$ badge : @Badge \\
 $-$ client : @Client \\
 \hline
 \cmt{constructeur} \\
-$+$ Chambre()\\
-%$+$ destructeur()\\
+$+$ Chambre(int id, String graine, int sel)\\
+$+$ destructeur()\\
 $+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ renouvelerClefs(Clef nouvelleClef) \\
@@ -437,7 +435,7 @@ $+$ associerClient(Client client) \\
 $+$ associerBadge(Badge badge) \\
 $+$ libérer() \\
 \hline
-\end{longtable}%)
+\end{longtable}
 \end{center}
 \newpage
 
@@ -451,7 +449,7 @@ $+$ libérer() \\
 \label{umlet_diag_classes}
 \end{figure}
 
-\textbf{Invariant de la classe Badge:} /enAttente || /estAttribué
+\textbf{Invariant de la classe Badge:} (id $\neq \nullvalue \land \neg \emptyvalue$) \&\& (/enAttente || /estAttribué)
 
 \newpage
 
