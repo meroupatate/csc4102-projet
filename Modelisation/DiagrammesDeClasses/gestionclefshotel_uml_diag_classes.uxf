@@ -20,6 +20,7 @@
 +enregistrerOccupationChambreClient(Chambre chambre, Client client, Badge badge)
 +libererChambre(Chambre chambre)
 +renouvelerClefsChambre(Chambre chambre)
++renouvelerClefsBadge(Badge badge)
 +initialiserBadge(Badge badge, Chambre chambre)</panel_attributes>
     <additional_attributes/>
   </element>

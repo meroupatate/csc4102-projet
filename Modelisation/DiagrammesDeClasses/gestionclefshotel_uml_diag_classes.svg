@@ -169,6 +169,8 @@
       ><text x="5" font-size="14px" y="160.9062" clip-path="url(#clipPath7)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+renouvelerClefsChambre(Chambre chambre)</text
       ><text x="5" font-size="14px" y="176.2969" clip-path="url(#clipPath7)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >+renouvelerClefsBadge(Badge badge)</text
+      ><text x="5" font-size="14px" y="191.6875" clip-path="url(#clipPath7)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+initialiserBadge(Badge badge, Chambre chambre)</text
     ></g
     ><g transform="translate(850,500)"
