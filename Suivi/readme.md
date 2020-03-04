@@ -69,6 +69,33 @@ Bon travail avec des précisions à apporter et à achever.
     --> ajout de l'état "en destruction"
     - [x] Invariant : vous avez rédigé la partie de l'invariant portant sur l'état du badge. Il manque la partie de l'invariant sur l'attribut id. Il faut qu'il soit non null et non vide.
     --> ajout de la condition id non null et non vide
-    
 
+# Suivi du mer. 04 mars 2020 10:53:57 CET
+Chantal Taconet
+
+Bon travail, penser à mettre en cohérence la modélisation et le code. 
+
+## Git
+## Modélisation
+### Diagramme de classes
+- [] Revoir le formalisme des classes d'association (pour le trio Chambre-Badge-Clé)
+- [] Composition (losange noir) ne peut pas être utilisé pour la classe Badge qui est connu par GestionClefsHotel et Badge : préférer une agrégation simple (losange vide) 
+- [] Attribut clé de Badge et Chambre sont redondants avec l'association avec une clé (lorsqu'il y a une association, on n'écrit pas l'attribut dans la classe, l'attribut est implicite et existera dans la classe java)
+
+## Diagramme de séquence
+- LibererChambre
+  - [] comment connaissez-vous l'identifiant d'un badge ? 
+  
+### Tests unitaires
+- [] Pourquoi n tests lorsque le badge est inexistant ? 
+
+## Code 
+
+- [] Pour assurer le principe d'encapsulation, les attributs de classe doivent être private
+- [] N'oublier pas de proposer et de programmer les invariants 
+- [] Avez-vous pensé à incrémenter le sel entre chaque génération de clé 
+
+### Cohérence avec la modélisation
+- La classe Clé du diagramme de classes n'apparaît pas dans le Code 
+- les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ? 
 ---
