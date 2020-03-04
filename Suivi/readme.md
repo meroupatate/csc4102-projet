@@ -78,24 +78,33 @@ Bon travail, penser à mettre en cohérence la modélisation et le code.
 ## Git
 ## Modélisation
 ### Diagramme de classes
-- [] Revoir le formalisme des classes d'association (pour le trio Chambre-Badge-Clé)
-- [] Composition (losange noir) ne peut pas être utilisé pour la classe Badge qui est connu par GestionClefsHotel et Badge : préférer une agrégation simple (losange vide) 
-- [] Attribut clé de Badge et Chambre sont redondants avec l'association avec une clé (lorsqu'il y a une association, on n'écrit pas l'attribut dans la classe, l'attribut est implicite et existera dans la classe java)
+- [x] Revoir le formalisme des classes d'association (pour le trio Chambre-Badge-Clé)
+- [x] Composition (losange noir) ne peut pas être utilisé pour la classe Badge qui est connu par GestionClefsHotel et Badge : préférer une agrégation simple (losange vide)
+--> ok agrégation simple pour la classe Badge 
+- [x] Attribut clé de Badge et Chambre sont redondants avec l'association avec une clé (lorsqu'il y a une association, on n'écrit pas l'attribut dans la classe, l'attribut est implicite et existera dans la classe java)
+--> association retirée car pas de classe Clef dans le code
 
 ## Diagramme de séquence
 - LibererChambre
-  - [] comment connaissez-vous l'identifiant d'un badge ? 
+  - [x] comment connaissez-vous l'identifiant d'un badge ?
+  --> effectivement le badge est connu grâce à l'attribut badge dans l'objet chambre, diagramme de séquence modifié en conséquence
   
 ### Tests unitaires
-- [] Pourquoi n tests lorsque le badge est inexistant ? 
+- [x] Pourquoi n tests lorsque le badge est inexistant ?
+--> ok: une seule recherche est nécessaire pour voir si le badge avec le bon identifiant existe
 
 ## Code 
 
-- [] Pour assurer le principe d'encapsulation, les attributs de classe doivent être private
-- [] N'oublier pas de proposer et de programmer les invariants 
-- [] Avez-vous pensé à incrémenter le sel entre chaque génération de clé 
+- [x] Pour assurer le principe d'encapsulation, les attributs de classe doivent être private
+--> ok: ajout des méthodes get<Attribut> en conséquence
+- [x] N'oublier pas de proposer et de programmer les invariants
+--> ok: invariants à compléter
+- [x] Avez-vous pensé à incrémenter le sel entre chaque génération de clé
+--> le sel n'était en effet pas incrémenté lors de la génération de la seconde clé dans le constructeur de Chambre, on a introduit une méthode Chambre.genereClef afin de palier à ce problème et de ne pas oublier d'incrémenter le sel dans le futur si besoin
 
 ### Cohérence avec la modélisation
-- La classe Clé du diagramme de classes n'apparaît pas dans le Code 
-- les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ? 
+- [x] La classe Clé du diagramme de classes n'apparaît pas dans le Code 
+--> classe Clé supprimée du diagramme
+- [x] les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ? 
+--> les identifiants sont des entiers dans le modèle et dans le code normalement, y a-t-il une incohérence que nous n'avons pas vue quelque part?
 ---

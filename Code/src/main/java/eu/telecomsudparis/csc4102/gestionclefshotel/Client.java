@@ -3,7 +3,7 @@ package eu.telecomsudparis.csc4102.gestionclefshotel;
 import java.util.Objects;
 
 public class Client {
-	int id;
+	private int id;
 	private String nom;
 	private String prenom;
 
@@ -16,6 +16,14 @@ public class Client {
 
 	private boolean invariant() {
 		return this.id != 0 && this.nom != null && this.prenom != null;
+	}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public String getPrenom() {
+		return this.prenom;
 	}
 
 	@Override

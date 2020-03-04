@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Badge {
 
-	int id;
-	byte[] premiereClef;
-	byte[] secondeClef;
+	private int id;
+	private byte[] premiereClef;
+	private byte[] secondeClef;
 
 	public Badge(int id) {
 		this.id = id;
@@ -25,6 +25,14 @@ public class Badge {
 
 	private boolean invariant() {
 		return this.id != 0;
+	}
+
+	public byte[] getPremiereClef() {
+		return this.premiereClef;
+	}
+
+	public byte[] getSecondeClef() {
+		return this.secondeClef;
 	}
 
 	@Override

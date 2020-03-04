@@ -372,15 +372,12 @@ $+$ invariant() : booléen\\
 $+$ créerChambre(int id, String graine, int sel) \\
 $+$ créerClient(int id, String nom, String prenom) \\
 $+$ créerBadge(int id) \\
-$+$ enregistrerOccupationChambreClient(Chambre chambre, Client client, Badge badge) \\
-$+$ libérerChambre(Chambre chambre) \\
-$+$ renouvelerClefsChambre(Chambre chambre) \\
-$+$ renouvelerClefsBadge(Badge badge) \\
-$+$ initialiserBadge(Badge badge, Chambre chambre) \\
+$+$ enregistrerOccupationChambreClient(int id\_chambre, int id\_client, int id\_badge) \\
+$+$ libérerChambre(int id\_chambre) \\
 \cmt{opérations de recherche} \\
-$+$ rechercheChambre(int id) \\
-$+$ rechercheClient(int id) \\
-$+$ rechercheBadge(int id) \\
+$+$ rechercheChambre(int id) : Chambre \\
+$+$ rechercheClient(int id) : Client\\
+$+$ rechercheBadge(int id) : Badge\\
 \hline
 \end{longtable}%)
 \end{center}
@@ -394,15 +391,17 @@ $+$ rechercheBadge(int id) \\
 \hline
 \cmt{attributs}\\
 $-$ id : int \\
-$-$ premiereClef : @Clef \\
-$-$ secondeClef : @Clef \\
+$-$ premiereClef : byte[] \\
+$-$ secondeClef : byte[] \\
 \hline
 \cmt{constructeur} \\
 $+$ Badge(int id)\\
 $+$ destructeur()\\
 $+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
-$+$ inscrireClefs(Clef premiereClef, Clef secondeClef) \\
+$+$ getPremiereClef() : byte[] \\
+$+$ getSecondeClef() : byte[] \\
+$+$ inscrireClefs(byte[] premiereClef, byte[] secondeClef) \\
 $+$ effacerClefs() \\
 \hline
 \end{longtable}
@@ -420,8 +419,8 @@ $+$ effacerClefs() \\
 $-$ id : int \\
 $-$ graine : String \\
 $-$ sel : int \\
-$-$ premiereClef : @Clef \\
-$-$ secondeClef : @Clef \\
+$-$ premiereClef : byte[] \\
+$-$ secondeClef : byte[] \\
 \cmt{attributs <<~association~>>}\\
 $-$ badge : @Badge \\
 $-$ client : @Client \\
@@ -431,10 +430,14 @@ $+$ Chambre(int id, String graine, int sel)\\
 $+$ destructeur()\\
 $+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
-$+$ renouvelerClefs(Clef nouvelleClef) \\
+$+$ getGraine() : String \\
+$+$ getSel() : int \\
+$+$ getPremiereClef() : byte[] \\
+$+$ getSecondeClef() : byte[] \\
 $+$ associerClient(Client client) \\
 $+$ associerBadge(Badge badge) \\
 $+$ libérer() \\
+$+$ genereClef() : byte[] \\
 \hline
 \end{longtable}
 \end{center}
@@ -488,7 +491,7 @@ Création du badge acceptée
 \hline
 \hline
 Nombre de jeux de test
-&2&n&1\\
+&2&1&1\\
 \hline
 \end{tabular}
 \end{center}

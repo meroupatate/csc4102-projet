@@ -20,8 +20,8 @@ public class Main {
 		GestionClefsHotel gestionClefsHotel = new GestionClefsHotel();
 		gestionClefsHotel.creerChambre(1, "poire Belle-Hélène", 1337);
 		Optional<Chambre> chambre = gestionClefsHotel.chercherChambre(1);
-		System.out.println(chambre.get().premiereClef);
-		System.out.println(chambre.get().secondeClef);
+		System.out.println(chambre.get().getPremiereClef());
+		System.out.println(chambre.get().getSecondeClef());
 	}
 
 }

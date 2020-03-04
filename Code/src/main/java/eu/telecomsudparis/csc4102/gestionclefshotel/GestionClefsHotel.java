@@ -40,15 +40,15 @@ public class GestionClefsHotel {
 		assert invariant();
 	}
 
-	public Optional<Chambre> chercherChambre(final int id) {
+	Optional<Chambre> chercherChambre(final int id) {
 		return Optional.ofNullable(chambres.get(id));
 	}
 
-	private Optional<Client> chercherClient(final int id) {
+	Optional<Client> chercherClient(final int id) {
 		return Optional.ofNullable(clients.get(id));
 	}
 
-	private Optional<Badge> chercherBadge(final int id) {
+	Optional<Badge> chercherBadge(final int id) {
 		return Optional.ofNullable(badges.get(id));
 	}
 
@@ -58,13 +58,13 @@ public class GestionClefsHotel {
 		Optional<Badge> badge = chercherBadge(id_badge);
 		chambre.get().associerClient(client.get());
 		chambre.get().associerBadge(badge.get());
-		byte[] nouvelleClef = Util.genererUneNouvelleClef(chambre.get().graine, String.format("%010d%n", chambre.get().sel));
-		badge.get().inscrireClefs(chambre.get().premiereClef, nouvelleClef);
+		byte[] nouvelleClef = Util.genererUneNouvelleClef(chambre.get().getGraine(), String.format("%010d%n", chambre.get().getSel()));
+		badge.get().inscrireClefs(chambre.get().getSecondeClef(), nouvelleClef);
 	}
 
 	public void libererChambre(final int id_chambre) {
 		Optional<Chambre> chambre = chercherChambre(id_chambre);
-		Optional<Badge> badge = Optional.ofNullable(chambre.get().badge);
+		Optional<Badge> badge = Optional.ofNullable(chambre.get().getBadge());
 		chambre.get().liberer();
 		badge.get().effacerClefs();
 	}

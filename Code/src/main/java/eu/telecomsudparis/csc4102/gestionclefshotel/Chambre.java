@@ -7,26 +7,55 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class Chambre {
-	int id;
-	String graine;
-	int sel;
-	byte[] premiereClef;
-	byte[] secondeClef;
-	Badge badge;
-	Client client;
+	private int id;
+	private String graine;
+	private int sel;
+	private byte[] premiereClef;
+	private byte[] secondeClef;
+	private Badge badge;
+	private Client client;
 
 	public Chambre(int id, String graine, int sel) throws ProblemeDansGenerationClef {
 		this.id = id;
 		this.graine = graine;
 		this.sel = sel;
-		premiereClef = Util.genererUneNouvelleClef(graine, String.format("%010d%n", this.sel));
-		this.sel++;
-		secondeClef = Util.genererUneNouvelleClef(graine, String.format("%010d%n", this.sel));
+		premiereClef = this.genereClef();
+		secondeClef = this.genereClef();
 		assert invariant();
 	}
 
 	private boolean invariant() {
 		return id != 0 && graine != null && sel != 0 && premiereClef != null && secondeClef != null;
+	}
+
+	private byte[] genereClef() throws ProblemeDansGenerationClef {
+		byte[] nouvelleClef = Util.genererUneNouvelleClef(this.graine, String.format("%010d%n", this.sel));
+		this.sel++;
+		return nouvelleClef;
+	}
+
+	public byte[] getPremiereClef() {
+		return this.premiereClef;
+	}
+
+	public byte[] getSecondeClef() {
+		return this.secondeClef;
+	}
+
+	public String getGraine() {
+		return this.graine;
+	}
+
+	public int getSel() {
+		return this.sel;
+	}
+
+	public Badge getBadge() {
+		return this.badge;
+	}
+
+	public Client getClient() {
+		return this.client;
 	}
 
 	public void associerClient(Client client) {
