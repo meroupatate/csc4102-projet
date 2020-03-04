@@ -113,16 +113,21 @@ public class TestTesterSerrure {
 
 	@Test
 	public void testerSerrureTest5Jeu1() throws Exception {
-		Assert.assertTrue(systeme.testerSerrure("serrure1", clef2, clef2));
+		Assert.assertTrue(systeme.testerSerrure("serrure1", clef1, clef2));
 	}
 
 	@Test
 	public void testerSerrureTest5Jeu2() throws Exception {
-		Assert.assertTrue(systeme.testerSerrure("serrure1", clef2, clef1));
+		Assert.assertTrue(systeme.testerSerrure("serrure1", clef2, clef2));
 	}
 
 	@Test
 	public void testerSerrureTest5Jeu3() throws Exception {
+		Assert.assertTrue(systeme.testerSerrure("serrure1", clef2, clef1));
+	}
+
+	@Test
+	public void testerSerrureTest5Jeu4() throws Exception {
 		Assert.assertTrue(systeme.testerSerrure("serrure1", clef2, clef3));
 	}
 }
