@@ -63,17 +63,16 @@ public class Chambre {
 		return this.client;
 	}
 
-	public void associerClient(Client client) {
+	public void associerClientBadge(Client client, Badge badge) {
 		this.client = client;
-	}
-
-	public void associerBadge(Badge badge) {
 		this.badge = badge;
+		assert invariant();
 	}
 
 	public void liberer() {
 		this.badge = null;
 		this.client = null;
+		assert invariant();
 	}
 
 	@Override

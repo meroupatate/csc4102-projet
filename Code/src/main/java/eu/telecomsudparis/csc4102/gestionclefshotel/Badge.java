@@ -16,16 +16,22 @@ public class Badge {
 	public void inscrireClefs(byte[] premiereClef, byte[] secondeClef) {
 		this.premiereClef = premiereClef;
 		this.secondeClef = secondeClef;
+		assert invariant();
 	}
 
 	public void effacerClefs() {
 		this.premiereClef = null;
 		this.secondeClef = null;
+		assert invariant();
 	}
 
 	private boolean invariant() {
 		return this.id != 0
 				&& ((this.premiereClef != null && this.secondeClef != null) || (this.premiereClef == null && this.secondeClef == null));
+	}
+
+	public int getId() {
+		return this.id;
 	}
 
 	public byte[] getPremiereClef() {
@@ -56,9 +62,5 @@ public class Badge {
 	@Override
 	public String toString() {
 		return "Badge [id=" + id + "]";
-	}
-
-	public int getId() {
-		return this.id;
 	}
 }
