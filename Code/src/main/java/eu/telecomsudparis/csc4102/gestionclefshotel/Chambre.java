@@ -25,13 +25,18 @@ public class Chambre {
 	}
 
 	private boolean invariant() {
-		return id != 0 && graine != null && sel != 0 && premiereClef != null && secondeClef != null;
+		return id != 0 && graine != null && sel != 0 && premiereClef != null && secondeClef != null
+				&& ((badge != null && client != null) || (badge == null && client == null));
 	}
 
 	private byte[] genereClef() throws ProblemeDansGenerationClef {
 		byte[] nouvelleClef = Util.genererUneNouvelleClef(this.graine, String.format("%010d%n", this.sel));
 		this.sel++;
 		return nouvelleClef;
+	}
+
+	public int getId() {
+		return this.id;
 	}
 
 	public byte[] getPremiereClef() {
@@ -90,6 +95,6 @@ public class Chambre {
 
 	@Override
 	public String toString() {
-		return "Chambre [graine=" + graine + ", sel=" + sel + "]";
+		return "Chambre [graine=" + graine + ", sel=" + sel + ", client=" + client + ", badge=" + badge + "]";
 	}
 }

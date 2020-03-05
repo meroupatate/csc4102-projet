@@ -24,7 +24,8 @@ public class Badge {
 	}
 
 	private boolean invariant() {
-		return this.id != 0;
+		return this.id != 0
+				&& ((this.premiereClef != null && this.secondeClef != null) || (this.premiereClef == null && this.secondeClef == null));
 	}
 
 	public byte[] getPremiereClef() {
@@ -55,5 +56,9 @@ public class Badge {
 	@Override
 	public String toString() {
 		return "Badge [id=" + id + "]";
+	}
+
+	public int getId() {
+		return this.id;
 	}
 }

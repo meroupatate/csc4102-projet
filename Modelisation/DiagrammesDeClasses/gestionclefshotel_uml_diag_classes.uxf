@@ -90,6 +90,7 @@ _+clefToString(byte[] clef): String_</panel_attributes>
 - secondeClef: byte[]
 --
 +constructeur(int id, String graine, int sel)
++getId()
 +getGraine()
 +getSel()
 +getPremiereClef()
@@ -106,7 +107,7 @@ _+clefToString(byte[] clef): String_</panel_attributes>
       <x>1000</x>
       <y>480</y>
       <w>290</w>
-      <h>110</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Client
 --
@@ -115,6 +116,7 @@ _+clefToString(byte[] clef): String_</panel_attributes>
 - prenom: String
 --
 +constructeur(int id, String nom, String prenom)
++getId()
 +getNom()
 +getPrenom()</panel_attributes>
     <additional_attributes/>
@@ -134,6 +136,7 @@ _+clefToString(byte[] clef): String_</panel_attributes>
 - secondeClef: byte[]
 --
 +constructeur(int id)
++getId()
 +getPremiereClef()
 +getSecondeClef()
 +inscrireClefs(byte[] premiereClef, byte[] secondeClef)

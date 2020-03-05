@@ -19,9 +19,16 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		GestionClefsHotel gestionClefsHotel = new GestionClefsHotel();
 		gestionClefsHotel.creerChambre(1, "poire Belle-Hélène", 1337);
+		gestionClefsHotel.creerClient(1, "Jean", "Michel");
+		gestionClefsHotel.creerBadge(1);
 		Optional<Chambre> chambre = gestionClefsHotel.chercherChambre(1);
+		System.out.println(chambre.get());
 		System.out.println(chambre.get().getPremiereClef());
 		System.out.println(chambre.get().getSecondeClef());
+		Optional<Client> client = gestionClefsHotel.chercherClient(1);
+		Optional<Badge> badge = gestionClefsHotel.chercherBadge(1);
+		gestionClefsHotel.enregistrerOccupationChambreClient(chambre.get().getId(), client.get().getId(), badge.get().getId());
+		System.out.println(chambre.get());
 	}
 
 }

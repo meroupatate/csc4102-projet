@@ -32,12 +32,19 @@ public class GestionClefsHotel {
 	 * @return true si l'invariant est vérifié.
 	 */
 	public boolean invariant() {
-		return chambres != null;
+		return true;
 	}
 
 	public void creerChambre(final int id, final String graine, final int sel) throws ProblemeDansGenerationClef {
 		chambres.put(id, new Chambre(id, graine, sel));
-		assert invariant();
+	}
+
+	public void creerClient(final int id, final String nom, final String prenom) {
+		clients.put(id, new Client(id, nom, prenom));
+	}
+
+	public void creerBadge(final int id) {
+		badges.put(id, new Badge(id));
 	}
 
 	Optional<Chambre> chercherChambre(final int id) {

@@ -12,7 +12,7 @@
       ><path d="M0 0 L0 170 L330 170 L330 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 110 L290 110 L290 0 Z"
+      ><path d="M0 0 L0 120 L290 120 L290 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
       ><path d="M0 0 L0 210 L370 210 L370 0 Z"
@@ -57,19 +57,21 @@
       /><text x="5" font-size="10px" y="71.2969" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+constructeur(int id)</text
       ><text x="5" font-size="10px" y="83.1562" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getPremiereClef()</text
+      >+getId()</text
       ><text x="5" font-size="10px" y="95.0156" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getSecondeClef()</text
+      >+getPremiereClef()</text
       ><text x="5" font-size="10px" y="106.875" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+inscrireClefs(byte[] premiereClef, byte[] secondeClef)</text
+      >+getSecondeClef()</text
       ><text x="5" font-size="10px" y="118.7344" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >+inscrireClefs(byte[] premiereClef, byte[] secondeClef)</text
+      ><text x="5" font-size="10px" y="130.5938" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+effacerClefs()</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(1000,480)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><rect x="0.5" width="288.5" height="108.5" y="0.5" clip-path="url(#clipPath3)" stroke="none"
+    ><rect x="0.5" width="288.5" height="118.5" y="0.5" clip-path="url(#clipPath3)" stroke="none"
     /></g
     ><g transform="translate(1000,480)"
-    ><rect fill="none" x="0.5" width="288.5" height="108.5" y="0.5" clip-path="url(#clipPath3)"
+    ><rect fill="none" x="0.5" width="288.5" height="118.5" y="0.5" clip-path="url(#clipPath3)"
       /><text x="132" font-size="10px" y="13.8594" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Client</text
       ><path fill="none" d="M1 19.8594 L289 19.8594" clip-path="url(#clipPath3)"
@@ -83,8 +85,10 @@
       /><text x="5" font-size="10px" y="71.2969" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+constructeur(int id, String nom, String prenom)</text
       ><text x="5" font-size="10px" y="83.1562" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getNom()</text
+      >+getId()</text
       ><text x="5" font-size="10px" y="95.0156" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >+getNom()</text
+      ><text x="5" font-size="10px" y="106.875" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+getPrenom()</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(490,430)" stroke-opacity="0" stroke="rgb(255,255,255)"
@@ -109,20 +113,22 @@
       /><text x="5" font-size="10px" y="95.0156" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+constructeur(int id, String graine, int sel)</text
       ><text x="5" font-size="10px" y="106.875" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getGraine()</text
+      >+getId()</text
       ><text x="5" font-size="10px" y="118.7344" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getSel()</text
+      >+getGraine()</text
       ><text x="5" font-size="10px" y="130.5938" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getPremiereClef()</text
+      >+getSel()</text
       ><text x="5" font-size="10px" y="142.4531" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+getSecondeClef()</text
+      >+getPremiereClef()</text
       ><text x="5" font-size="10px" y="154.3125" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+liberer()</text
+      >+getSecondeClef()</text
       ><text x="5" font-size="10px" y="166.1719" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+genereClef()</text
+      >+liberer()</text
       ><text x="5" font-size="10px" y="178.0312" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >+associerClient(Client client)</text
+      >+genereClef()</text
       ><text x="5" font-size="10px" y="189.8906" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >+associerClient(Client client)</text
+      ><text x="5" font-size="10px" y="201.75" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >+associerBadge(Badge badge)</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(510,20)" stroke-opacity="0" stroke="rgb(255,255,255)"

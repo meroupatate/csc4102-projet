@@ -453,7 +453,7 @@ $+$ genereClef() : byte[] \\
 \label{umlet_diag_classes}
 \end{figure}
 
-\textbf{Invariant de la classe Badge:} (id $\neq \nullvalue \land \neg \emptyvalue$) \&\& (/enAttente || /estAttribué)
+\textbf{Invariant de la classe Badge:} (id $\neq \nullvalue \land \neg \emptyvalue$) \&\& $(/estAttribue \land premiereClef \neq \nullvalue \land secondeClef \neq \nullvalue)$  || $(/nonAttribue \land premiereClef = \nullvalue \land secondeClef = \nullvalue)$
 
 \newpage
 
