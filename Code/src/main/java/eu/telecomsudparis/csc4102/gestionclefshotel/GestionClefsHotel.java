@@ -41,8 +41,8 @@ public class GestionClefsHotel {
 		if (id == 0) {
 			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
 		}
-		else if (graine == null) {
-			throw new ChaineDeCaracteresNullOuVide("graine null non autorisée");
+		else if (graine == null || graine == "") {
+			throw new ChaineDeCaracteresNullOuVide("graine null ou vide non autorisée");
 		}
 		else if (chercherChambre(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer la chambre avec un identifiant déjà utilisé");
@@ -54,8 +54,8 @@ public class GestionClefsHotel {
 		if (id == 0) {
 			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
 		}
-		else if (nom == null || prenom == null) {
-			throw new ChaineDeCaracteresNullOuVide("nom ou prénom null non autorisé");
+		else if (nom == null || prenom == null || nom == "" || prenom == "") {
+			throw new ChaineDeCaracteresNullOuVide("nom ou prénom null ou vide non autorisé");
 		}
 		else if (chercherClient(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer un client avec un identifiant déjà utilisé");
@@ -73,15 +73,24 @@ public class GestionClefsHotel {
 		badges.put(id, new Badge(id));
 	}
 
-	public Optional<Chambre> chercherChambre(final int id) {
+	public Optional<Chambre> chercherChambre(final int id) throws OperationImpossible {
+		if (id == 0) {
+			throw new OperationImpossible("impossible de rechercher une chambre avec un identifiant nul");
+		}
 		return Optional.ofNullable(chambres.get(id));
 	}
 
-	public Optional<Client> chercherClient(final int id) {
+	public Optional<Client> chercherClient(final int id) throws OperationImpossible {
+		if (id == 0) {
+			throw new OperationImpossible("impossible de rechercher un client avec un identifiant nul");
+		}
 		return Optional.ofNullable(clients.get(id));
 	}
 
-	Optional<Badge> chercherBadge(final int id) {
+	public Optional<Badge> chercherBadge(final int id) throws OperationImpossible {
+		if (id == 0) {
+			throw new OperationImpossible("impossible de rechercher un badge avec un identifiant nul");
+		}
 		return Optional.ofNullable(badges.get(id));
 	}
 
@@ -92,13 +101,13 @@ public class GestionClefsHotel {
 		if (!client.isPresent()) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre par un client inexistant");
 		}
-		else if (client.get().getNom() == null || client.get().getPrenom() == null) {
-			throw new ChaineDeCaracteresNullOuVide("nom ou prénom du client null non autorisé");
+		else if (client.get().getNom() == null || client.get().getPrenom() == null || client.get().getPrenom() == "" || client.get().getNom() == "") {
+			throw new ChaineDeCaracteresNullOuVide("nom ou prénom du client null ou vide non autorisé");
 		}
 		else if (!chambre.isPresent()) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre inexistante");
 		}
-		else if (chambre.get().getClient() == null) {
+		else if (chambre.get().getClient() != null || chambre.get().getBadge() != null) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre déjà occupée");
 		}
 		else if (!badge.isPresent()) {
