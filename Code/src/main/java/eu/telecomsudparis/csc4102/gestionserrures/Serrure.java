@@ -111,14 +111,15 @@ public class Serrure {
 		if (secondeClef == null || secondeClef.length == 0) {
 			throw new ClefNullOuVide("seconde clef null ou vide non autorisé");
 		}
-		boolean test = testerSerrure(premiereClef, secondeClef);
-		if (test) {
+		boolean clefsAChanger = Arrays.equals(premiereClef, this.secondeClef);
+		boolean porteOuverte = testerSerrure(premiereClef, secondeClef);
+		if (porteOuverte && clefsAChanger) {
 			this.premiereClef = this.secondeClef.clone();
 			sel++;
 			this.secondeClef = Util.genererUneNouvelleClef(graine, String.format("%010d%n", this.sel));
 		}
 		assert invariant();
-		return test ? GestionSerrures.MESSAGE_PORTE_OUVERTE : GestionSerrures.MESSAGE_PORTE_FERMEE;
+		return porteOuverte ? GestionSerrures.MESSAGE_PORTE_OUVERTE : GestionSerrures.MESSAGE_PORTE_FERMEE;
 	}
 
 	/**

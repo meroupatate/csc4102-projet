@@ -119,6 +119,22 @@ public class TestEssayerDOuvrirUnePorte {
 	@Test
 	public void testerEssayerDOuvrirLaPorteTest5Jeu1() throws Exception {
 		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
+				systeme.essayerDOuvrirUnePorte("serrure1", clef1, clef2));
+		Assert.assertTrue(Arrays.equals(clef1, systeme.obtenirPremiereClefSerrure("serrure1")));
+		Assert.assertTrue(Arrays.equals(clef2, systeme.obtenirSecondeClefSerrure("serrure1")));
+		// avec une grande probabilité, vérification nouvelle clef distincte
+		byte[] nouvelleClef2 = systeme.obtenirSecondeClefSerrure("serrure1");
+		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef1));
+		Assert.assertTrue(Arrays.equals(nouvelleClef2, clef2));
+		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef3));
+		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef4));
+		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
+				systeme.essayerDOuvrirUnePorte("serrure1", clef2, nouvelleClef2));
+	}
+
+	@Test
+	public void testerEssayerDOuvrirLaPorteTest5Jeu2() throws Exception {
+		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
 				systeme.essayerDOuvrirUnePorte("serrure1", clef2, clef2));
 		Assert.assertTrue(Arrays.equals(clef2, systeme.obtenirPremiereClefSerrure("serrure1")));
 		// avec une grande probabilité, vérification nouvelle clef distincte
@@ -127,10 +143,12 @@ public class TestEssayerDOuvrirUnePorte {
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef2));
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef3));
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef4));
+		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
+				systeme.essayerDOuvrirUnePorte("serrure1", clef2, nouvelleClef2));
 	}
 
 	@Test
-	public void testerEssayerDOuvrirLaPorteTest5Jeu2() throws Exception {
+	public void testerEssayerDOuvrirLaPorteTest5Jeu3() throws Exception {
 		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
 				systeme.essayerDOuvrirUnePorte("serrure1", clef2, clef1));
 		Assert.assertTrue(Arrays.equals(clef2, systeme.obtenirPremiereClefSerrure("serrure1")));
@@ -140,10 +158,12 @@ public class TestEssayerDOuvrirUnePorte {
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef2));
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef3));
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef4));
+		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
+				systeme.essayerDOuvrirUnePorte("serrure1", clef2, nouvelleClef2));
 	}
 
 	@Test
-	public void testerEssayerDOuvrirLaPorteTest5Jeu3() throws Exception {
+	public void testerEssayerDOuvrirLaPorteTest5Jeu4() throws Exception {
 		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
 				systeme.essayerDOuvrirUnePorte("serrure1", clef2, clef3));
 		Assert.assertTrue(Arrays.equals(clef2, systeme.obtenirPremiereClefSerrure("serrure1")));
@@ -153,5 +173,7 @@ public class TestEssayerDOuvrirUnePorte {
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef2));
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef3));
 		Assert.assertFalse(Arrays.equals(nouvelleClef2, clef4));
+		Assert.assertEquals(GestionSerrures.MESSAGE_PORTE_OUVERTE,
+				systeme.essayerDOuvrirUnePorte("serrure1", clef2, nouvelleClef2));
 	}
 }

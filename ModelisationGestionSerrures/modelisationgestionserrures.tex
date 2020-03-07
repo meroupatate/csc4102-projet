@@ -76,7 +76,7 @@
 \begin{document}
 \title{Système \gestionserrures pour la gestion des serrures programmables}
 \author{Denis Conan}
-\date{Janvier 2020}
+\date{Janvier 2020, correction le 3 mars 2020}
 \maketitle
 
 \newpage
@@ -151,19 +151,26 @@ indiquons uniquement leur niveau de priorité.
 \usecase{\haute}{Créer une serrure}
         %% précondition
         {identifiant de la serrure bien formé (non \nullvalue et non
-          vide) $\land$ serrure avec cet identifiant inexistante}
+          vide)
+          \newline
+          $\land$ serrure avec cet identifiant inexistante}
         %% postcondition
-        {serrure avec cet identifiant existante $\land$ les deux clefs
-          sont les deux premières valeurs générées à partir de la
-          graine et du sel}
+        {serrure avec cet identifiant existante
+          \newline
+          $\land$ les deux clefs sont les deux premières valeurs
+          générées à partir de la graine et du sel}
         
 \smallskip
 
 \usecase{\haute}{Ré-initialiser les clefs d'une serrure}
-        {identifiant de la serrure bien formé (non \nullvalue et non vide)
-          $\land$ serrure avec cet identifiant existante $\land$ nouvelle
-          graine de la serrure bien formée (non \nullvalue et non
-          vide) $\land$ nouvelle graine ou nouveau sel différents}
+        {identifiant de la serrure bien formé (non \nullvalue et non
+          vide)
+          \newline
+          $\land$ serrure avec cet identifiant existante
+          \newline
+          $\land$ nouvelle graine de la serrure bien formée (non
+          \nullvalue et non vide)
+          \newline $\land$ nouvelle graine ou nouveau sel différents}
         {une nouvelle graine $\lor$ un nouveau sel
           \newline
           $\land$ première clef de la nouvelle paire $\neq$ première
@@ -175,8 +182,9 @@ indiquons uniquement leur niveau de priorité.
           $\land$ seconde clef de la nouvelle paire $\neq$ première
           clef de l'ancienne paire
           \newline
-          $\land$ seconde clef de la nouvelle paire $\neq$ seconde
-          clef de l'ancienne paire}
+          $\land$
+          seconde clef de la nouvelle paire $\neq$ seconde clef de
+          l'ancienne paire}
 
 \smallskip
 
@@ -195,9 +203,12 @@ indiquons uniquement leur niveau de priorité.
 \usecase{\haute}{Tester une serrure avec deux clefs}
         %% précondition
         {identifiant de la serrure bien formé (non \nullvalue et non
-          vide) $\land$ serrure avec cet identifiant existante $\land$
-          valeurs fournies pour les clefs $K_1$ et $K_2$ bien formées
-          (non \nullvalue et non vides)}
+          vide)
+          \newline
+          $\land$ serrure avec cet identifiant existante
+          \newline
+          $\land$ valeurs fournies pour les clefs $K_1$ et $K_2$ bien
+          formées (non \nullvalue et non vides)}
         %% postcondition
         {~\newline
           $\Bigl[K_1$ et $K_2$ fournies identiques respectivement aux première
@@ -209,13 +220,17 @@ indiquons uniquement leur niveau de priorité.
 \usecase{\haute}{Essayer d'ouvrir la porte avec un badge}
         %% précondition
         {identifiant de la serrure bien formé (non \nullvalue et non
-          vide) $\land$ serrure avec cet identifiant existante $\land$
-          valeur des clefs $K_1$ et $K_2$ bien formées (non \nullvalue
-          et non vides) $\land$
+          vide)
           \newline
-          $\Bigl[K_1$ et $K_2$ fournies identiques respectivement aux
-            première et seconde clefs de la serrure  $\lor K_1$
-            fournie était identique à la seconde clef de la serrure$\Bigr]$}
+          $\land$ serrure avec cet identifiant existante
+          \newline
+          $\land$ valeur des clefs $K_1$ et $K_2$ bien formées (non
+          \nullvalue et non vides)
+          \newline
+          $\land$ $\Bigl[K_1$ et $K_2$ fournies identiques
+            respectivement aux première et seconde clefs de la serrure
+            $\lor K_1$ fournie était identique à la seconde clef de la
+            serrure$\Bigr]$}
         %% postcondition
         {
           \newline
@@ -347,7 +362,7 @@ La porte peut s'ouvrir
 \hline
 \hline
 Nombre de jeux de test 
-&2&1&4&5&3\\
+&2&1&4&5&4\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~tester une serrure avec deux clefs~>>}
@@ -385,8 +400,8 @@ $K_2=\mathit{KS}_1$ & Impossible car non-respect de l'invariant de la serrure\\
 contradiction\newline ($K_1=\mathit{KS}_1=K_2=\mathit{KS}_2\neq{K_1}$)\\
 \hline
 %% 4
-&
-" & " & " & $K_2\neq\mathit{KS}_1$ & Impossible car non-respect de l'invariant de la serrure\\
+T1&
+" & " & " & $K_2\neq\mathit{KS}_1$ & $\mathit{true}$\\
 \hline
 %% 5
 &
@@ -411,7 +426,7 @@ $K_1\neq\mathit{KS}_1$ & $K_2=\mathit{KS}_2$ & $K_1=\mathit{KS}_2$ &
 $K_2=\mathit{KS}_1$ & Impossible car contradiction\newline ($K_1=\mathit{KS}_2=K_2=\mathit{KS}_1\neq{}K_1$)\\
 \hline
 %% 10
-T1&
+T2&
 " & " & " & $K_2\neq\mathit{KS}_1$ & $\mathit{true}$\\
 \hline
 %% 11
@@ -423,12 +438,12 @@ F3&
 " & " & " & $K_2\neq\mathit{KS}_1$ & $\mathit{false}$\\
 \hline
 %% 13
-T2&
+T3&
 " & $K_2\neq\mathit{KS}_2$ & $K_1=\mathit{KS}_2$ & $K_2=\mathit{KS}_1$
 & $\mathit{true}$\\
 \hline
 %% 14
-T3&
+T4&
 " & " & " & $K_2\neq\mathit{KS}_1$ & $\mathit{true}$\\
 \hline
 %% 15
@@ -483,7 +498,7 @@ $\lor$ la porte ne s'ouvre pas}
 \hline
 \hline
 Nombre de jeux de test
-&2&1&2&5&3\\
+&2&1&2&5&4\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~essayer d'ouvrir la porte avec un badge~>>}
@@ -495,7 +510,7 @@ Nombre de jeux de test
 \section{Conception}
 \label{SS_simserrures_conception}
 
-\subsection{Diagrammes de séquence}
+\subsection{Diagrammes de classes}
 
 Le diagramme de classes de la figure qui suit contient la façade du
 système: la classe \textsf{GestionSerrures}, ainsi que la classe
@@ -753,7 +768,7 @@ Nombre de jeux de test
 \hline
 \end{tabular}
 \caption{Méthode \texttt{constructeurSerrure} de la
-classe \texttt{Serrure}~>>}
+classe \texttt{Serrure}}
 \end{center}
 \end{table}
 
@@ -791,13 +806,13 @@ La porte peut s'ouvrire
 \hline
 \hline
 Nombre de jeux de test 
-&4&5&3\\
+&4&5&4\\
 \hline
 \end{tabular}
 \caption{Méthode \texttt{tester} de la classe
-  \texttt{Serrure}~>>. Nous utilisons la même table pour calculer le
+  \texttt{Serrure}. Nous utilisons la même table pour calculer le
   nombre de tests dans les jeux de test des tests~2 et~3:
-  5~combinaisons possibles pour \textsf{false} et~3 combinaisons
+  5~combinaisons possibles pour \textsf{false} et~4 combinaisons
   possibles pour \textsf{true}.}
 \end{center}
 \end{table}
@@ -832,13 +847,13 @@ $\lor$ la porte ne s'ouvre pas}
 \hline
 \hline
 Nombre de jeux de test
-&2&5&3\\
+&2&5&4\\
 \hline
 \end{tabular}
 \caption{Méthode \texttt{essayerDOuvrirLaPorte} de la classe
-  \texttt{Serrure}~>>. Nous utilisons la même table pour calculer le
+  \texttt{Serrure}. Nous utilisons la même table pour calculer le
   nombre de tests dans les jeux de test des tests~2 et~3:
-  5~combinaisons possibles pour \textsf{false} et~3 combinaisons
+  5~combinaisons possibles pour \textsf{false} et~4 combinaisons
   possibles pour \textsf{true}.}
 \end{center}
 \end{table}
@@ -894,7 +909,7 @@ Nombre de jeux de test
 \hline
 \end{tabular}
 \caption{Méthode \texttt{réInitialiser} de la classe
-  \texttt{Serrure}~>>. Le test~3 comporte un jeu de trois tests selon
+  \texttt{Serrure}. Le test~3 comporte un jeu de trois tests selon
   que la graine ou le sel sont différents.}
 \end{center}
 \end{table}
