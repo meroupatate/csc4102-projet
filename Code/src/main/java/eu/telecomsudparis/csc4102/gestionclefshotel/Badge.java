@@ -1,5 +1,8 @@
 package eu.telecomsudparis.csc4102.gestionclefshotel;
 
+import eu.telecomsudparis.csc4102.exception.ChaineDeCaracteresNullOuVide;
+import eu.telecomsudparis.csc4102.util.OperationImpossible;
+
 import java.util.Objects;
 
 public class Badge {
@@ -8,7 +11,10 @@ public class Badge {
 	private byte[] premiereClef;
 	private byte[] secondeClef;
 
-	public Badge(int id) {
+	public Badge(int id) throws ChaineDeCaracteresNullOuVide {
+		if (id == 0) {
+			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
+		}
 		this.id = id;
 		assert invariant();
 	}

@@ -44,7 +44,7 @@ public class GestionClefsHotel {
 		else if (graine == null) {
 			throw new ChaineDeCaracteresNullOuVide("graine null non autorisée");
 		}
-		else if (chercherChambre(id) != null) {
+		else if (chercherChambre(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer la chambre avec un identifiant déjà utilisé");
 		}
 		chambres.put(id, new Chambre(id, graine, sel));
@@ -57,7 +57,7 @@ public class GestionClefsHotel {
 		else if (nom == null || prenom == null) {
 			throw new ChaineDeCaracteresNullOuVide("nom ou prénom null non autorisé");
 		}
-		else if (chercherClient(id) != null) {
+		else if (chercherClient(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer un client avec un identifiant déjà utilisé");
 		}
 		clients.put(id, new Client(id, nom, prenom));
@@ -67,17 +67,17 @@ public class GestionClefsHotel {
 		if (id == 0) {
 			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
 		}
-		else if (chercherBadge(id) != null) {
+		else if (chercherBadge(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer un badge avec un identifiant déjà utilisé");
 		}
 		badges.put(id, new Badge(id));
 	}
 
-	Optional<Chambre> chercherChambre(final int id) {
+	public Optional<Chambre> chercherChambre(final int id) {
 		return Optional.ofNullable(chambres.get(id));
 	}
 
-	Optional<Client> chercherClient(final int id) {
+	public Optional<Client> chercherClient(final int id) {
 		return Optional.ofNullable(clients.get(id));
 	}
 
