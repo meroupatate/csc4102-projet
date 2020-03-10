@@ -9,16 +9,20 @@ import java.util.Optional;
  * 
  * @author Denis Conan
  */
-public class Main {
+final class Main {
+
+	private Main() { };
+
 	/**
 	 * point d'entrée du scénario.
 	 * 
 	 * @param args arguments de la ligne de commande.
 	 * @throws Exception tous les problèmes.
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(final String[] args) throws Exception {
+		final int sel1 = 1337;
 		GestionClefsHotel gestionClefsHotel = new GestionClefsHotel();
-		gestionClefsHotel.creerChambre(1, "poire Belle-Hélène", 1337);
+		gestionClefsHotel.creerChambre(1, "poire Belle-Hélène", sel1);
 		gestionClefsHotel.creerClient(1, "Jean", "Michel");
 		gestionClefsHotel.creerBadge(1);
 		Optional<Chambre> chambre = gestionClefsHotel.chercherChambre(1);
