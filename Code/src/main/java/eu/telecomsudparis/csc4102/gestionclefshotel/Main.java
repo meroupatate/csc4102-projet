@@ -1,5 +1,6 @@
 package eu.telecomsudparis.csc4102.gestionclefshotel;
 
+import java.util.Arrays;
 import java.util.Optional;
 
 /**
@@ -27,8 +28,8 @@ final class Main {
 		gestionClefsHotel.creerBadge(1);
 		Optional<Chambre> chambre = gestionClefsHotel.chercherChambre(1);
 		System.out.println(chambre.get());
-		System.out.println(chambre.get().getPremiereClef());
-		System.out.println(chambre.get().getSecondeClef());
+		System.out.println(Arrays.toString(chambre.get().getPremiereClef()));
+		System.out.println(Arrays.toString(chambre.get().getSecondeClef()));
 		Optional<Client> client = gestionClefsHotel.chercherClient(1);
 		Optional<Badge> badge = gestionClefsHotel.chercherBadge(1);
 		gestionClefsHotel.enregistrerOccupationChambreClient(chambre.get().getId(), client.get().getId(), badge.get().getId());

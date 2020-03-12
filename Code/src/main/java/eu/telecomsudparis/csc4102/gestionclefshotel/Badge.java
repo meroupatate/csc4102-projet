@@ -41,8 +41,8 @@ public class Badge {
 	 * @param secondeClef
 	 */
 	public void inscrireClefs(final byte[] premiereClef, final byte[] secondeClef) {
-		this.premiereClef = premiereClef;
-		this.secondeClef = secondeClef;
+		this.premiereClef = premiereClef.clone();
+		this.secondeClef = secondeClef.clone();
 		assert invariant();
 	}
 
@@ -77,7 +77,10 @@ public class Badge {
 	 * @return byte[]
 	 */
 	public byte[] getPremiereClef() {
-		return this.premiereClef;
+		if (this.premiereClef == null) {
+			return null;
+		}
+		return this.premiereClef.clone();
 	}
 
 	/**
@@ -85,7 +88,10 @@ public class Badge {
 	 * @return byte[]
 	 */
 	public byte[] getSecondeClef() {
-		return this.secondeClef;
+		if (this.secondeClef == null) {
+			return null;
+		}
+		return this.secondeClef.clone();
 	}
 
 	@Override

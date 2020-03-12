@@ -54,7 +54,7 @@ public class GestionClefsHotel {
 	public void creerChambre(final int id, final String graine, final int sel) throws OperationImpossible {
 		if (id == 0) {
 			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
-		} else if (graine == null || graine == "") {
+		} else if (graine == null || graine.equals("")) {
 			throw new ChaineDeCaracteresNullOuVide("graine null ou vide non autorisée");
 		} else if (chercherChambre(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer la chambre avec un identifiant déjà utilisé");
@@ -72,7 +72,7 @@ public class GestionClefsHotel {
 	public void creerClient(final int id, final String nom, final String prenom) throws OperationImpossible {
 		if (id == 0) {
 			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
-		} else if (nom == null || prenom == null || nom == "" || prenom == "") {
+		} else if (nom == null || prenom == null || nom.equals("") || prenom.equals("")) {
 			throw new ChaineDeCaracteresNullOuVide("nom ou prénom null ou vide non autorisé");
 		} else if (chercherClient(id).isPresent()) {
 			throw new OperationImpossible("impossible de créer un client avec un identifiant déjà utilisé");
@@ -148,7 +148,7 @@ public class GestionClefsHotel {
 		Optional<Badge> badge = chercherBadge(idBadge);
 		if (!client.isPresent()) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre par un client inexistant");
-		} else if (client.get().getNom() == null || client.get().getPrenom() == null || client.get().getPrenom() == "" || client.get().getNom() == "") {
+		} else if (client.get().getNom() == null || client.get().getPrenom() == null || client.get().getPrenom().equals("") || client.get().getNom().equals("")) {
 			throw new ChaineDeCaracteresNullOuVide("nom ou prénom du client null ou vide non autorisé");
 		} else if (!chambre.isPresent()) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre inexistante");

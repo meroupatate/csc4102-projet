@@ -82,21 +82,27 @@ public class Chambre {
 		return this.id;
 	}
 
-	/**
-	 * Permet d'accéder à la première clef de la chambre.
-	 * @return byte[]
-	 */
-	public byte[] getPremiereClef() {
-		return this.premiereClef;
-	}
+    /**
+     * Permet d'accéder à l'attribut premiereClef.
+     * @return byte[]
+     */
+    public byte[] getPremiereClef() {
+        if (this.premiereClef == null) {
+            return null;
+        }
+        return this.premiereClef.clone();
+    }
 
-	/**
-	 * Permet d'accéder à la seconde clef de la chambre.
-	 * @return byte[]
-	 */
-	public byte[] getSecondeClef() {
-		return this.secondeClef;
-	}
+    /**
+     * Permet d'accéder à l'attribut secondeClef.
+     * @return byte[]
+     */
+    public byte[] getSecondeClef() {
+        if (this.secondeClef == null) {
+            return null;
+        }
+        return this.secondeClef.clone();
+    }
 
 	/**
 	 * Permet d'accéder à la graine de la chambre.

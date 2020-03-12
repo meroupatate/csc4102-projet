@@ -69,8 +69,8 @@ public class TestBadge {
         byte[] clef2 = "[B@76b0bfab".getBytes();
         badge1.inscrireClefs(clef1, clef2);
         byte[] premiereClef = badge1.getPremiereClef();
-        Assert.assertEquals(clef1, premiereClef);
+        Assert.assertArrayEquals(clef1, premiereClef);
         byte[] secondeClef = badge1.getSecondeClef();
-        Assert.assertEquals(clef2, secondeClef);
+        Assert.assertArrayEquals(clef2, secondeClef);
     }
 }
