@@ -39,10 +39,10 @@ public class Chambre {
 
 	/**
 	 * Constructeur d'un objet chambre avec un identifiant, une graine et un sel.
-	 * @param id
-	 * @param graine
-	 * @param sel
-	 * @throws ProblemeDansGenerationClef
+	 * @param id identifiant de la chambre à créer
+	 * @param graine graine de la chambre à créer
+	 * @param sel sel de la chambre à créer
+	 * @throws ProblemeDansGenerationClef problème dans la génération de clef
 	 */
 	public Chambre(final int id, final String graine, final int sel) throws ProblemeDansGenerationClef {
 		this.id = id;
@@ -66,7 +66,7 @@ public class Chambre {
 	 * Génère une clef à partir de la graine et du sel de la chambre.
 	 * Incrémente le sel après chaque génération.
 	 * @return byte[]
-	 * @throws ProblemeDansGenerationClef
+	 * @throws ProblemeDansGenerationClef problème dans la génération de la clef
 	 */
 	private byte[] genereClef() throws ProblemeDansGenerationClef {
 		byte[] nouvelleClef = Util.genererUneNouvelleClef(this.graine, String.format("%010d%n", this.sel));
@@ -138,8 +138,8 @@ public class Chambre {
 
 	/**
 	 * Associe la chambre avec un client et le badge donné à ce client.
-	 * @param client
-	 * @param badge
+	 * @param client client à associer à la chambre
+	 * @param badge badge à associer à la chambre
 	 */
 	public void associerClientBadge(final Client client, final Badge badge) {
 		this.client = client;

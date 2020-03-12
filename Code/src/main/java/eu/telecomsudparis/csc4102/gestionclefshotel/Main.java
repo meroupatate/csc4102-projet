@@ -12,6 +12,9 @@ import java.util.Optional;
  */
 final class Main {
 
+	/**
+	 * Pour éviter l'erreur CheckStyle: "Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public".
+	 */
 	private Main() { };
 
 	/**

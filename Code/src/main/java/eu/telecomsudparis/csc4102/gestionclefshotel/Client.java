@@ -21,9 +21,9 @@ public class Client {
 
 	/**
 	 * Constructeur de la classe Client avec un identifiant, un nom et un prénom.
-	 * @param id
-	 * @param nom
-	 * @param prenom
+	 * @param id identifiant du client à créer
+	 * @param nom nom du client à créer
+	 * @param prenom prénom du client à créer
 	 */
 	public Client(final int id, final String nom, final String prenom) {
 		this.id = id;

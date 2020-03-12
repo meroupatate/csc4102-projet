@@ -24,8 +24,8 @@ public class Badge {
 
 	/**
 	 * Constructeur de la classe Badge avec un identifiant non nul.
-	 * @param id
-	 * @throws ChaineDeCaracteresNullOuVide
+	 * @param id identifiant du badge à créer
+	 * @throws ChaineDeCaracteresNullOuVide quand l'identifiant est nul
 	 */
 	public Badge(final int id) throws ChaineDeCaracteresNullOuVide {
 		if (id == 0) {
@@ -37,8 +37,8 @@ public class Badge {
 
 	/**
 	 * Permet d'inscrire deux clefs dans le badge.
-	 * @param premiereClef
-	 * @param secondeClef
+	 * @param premiereClef première clef à inscrire
+	 * @param secondeClef seconde clef à inscrire
 	 */
 	public void inscrireClefs(final byte[] premiereClef, final byte[] secondeClef) {
 		this.premiereClef = premiereClef.clone();

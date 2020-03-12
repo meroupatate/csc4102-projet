@@ -46,9 +46,9 @@ public class GestionClefsHotel {
 
 	/**
 	 * Crée une chambre dans le système avec un identifiant, une graine et un sel.
-	 * @param id
-	 * @param graine
-	 * @param sel
+	 * @param id identifiant de la chambre à créer
+	 * @param graine graine de la chambre à créer
+	 * @param sel sel de la chambre à créer
 	 * @throws OperationImpossible si la chambre n'existe pas.
 	 */
 	public void creerChambre(final int id, final String graine, final int sel) throws OperationImpossible {
@@ -64,10 +64,10 @@ public class GestionClefsHotel {
 
 	/**
 	 * Crée un client dans le système avec un identifiant, un nom et un prénom.
-	 * @param id
-	 * @param nom
-	 * @param prenom
-	 * @throws OperationImpossible
+	 * @param id identifiant du client à créer
+	 * @param nom nom du client à créer
+	 * @param prenom prénom du client à créer
+	 * @throws OperationImpossible erreur dans la création du client
 	 */
 	public void creerClient(final int id, final String nom, final String prenom) throws OperationImpossible {
 		if (id == 0) {
@@ -82,8 +82,8 @@ public class GestionClefsHotel {
 
 	/**
 	 * Crée un badge dans le système avec un identifiant.
-	 * @param id
-	 * @throws OperationImpossible
+	 * @param id identifiant du badge à créer
+	 * @throws OperationImpossible erreur dans la création du badge
 	 */
 	public void creerBadge(final int id) throws OperationImpossible {
 		if (id == 0) {
@@ -96,9 +96,9 @@ public class GestionClefsHotel {
 
 	/**
 	 * Recherche une chambre dans le système à partir d'un identifiant.
-	 * @param id
+	 * @param id identifiant de la chambre à chercher
 	 * @return Optional qui contient la chambre.
-	 * @throws OperationImpossible
+	 * @throws OperationImpossible quand l'identifiant recherché est nul
 	 */
 	public Optional<Chambre> chercherChambre(final int id) throws OperationImpossible {
 		if (id == 0) {
@@ -109,9 +109,9 @@ public class GestionClefsHotel {
 
 	/**
 	 * Recherche un client dans le système à partir d'un identifiant.
-	 * @param id
+	 * @param id identifiant du client à chercher
 	 * @return Optional qui contient le client.
-	 * @throws OperationImpossible
+	 * @throws OperationImpossible quand l'identifiant recherché est nul
 	 */
 	public Optional<Client> chercherClient(final int id) throws OperationImpossible {
 		if (id == 0) {
@@ -122,9 +122,9 @@ public class GestionClefsHotel {
 
 	/**
 	 * Recherche un badge dans le système à partir d'un identifiant.
-	 * @param id
+	 * @param id identifiant du badge à chercher
 	 * @return Optional qui contient le badge.
-	 * @throws OperationImpossible
+	 * @throws OperationImpossible quand l'identifiant recherché est nul
 	 */
 	public Optional<Badge> chercherBadge(final int id) throws OperationImpossible {
 		if (id == 0) {
@@ -137,10 +137,10 @@ public class GestionClefsHotel {
 	 * Enregistre l'occupation d'une chambre par un client.
 	 * Prend en arguments les identifiants de la chambre, du client et du badge.
 	 * Associe le client et le badge à la chambre.
-	 * @param idChambre
-	 * @param idClient
-	 * @param idBadge
-	 * @throws OperationImpossible
+	 * @param idChambre identifiant de la chambre à occuper
+	 * @param idClient identifiant du client à enregistrer
+	 * @param idBadge identifiant du badge à utiliser
+	 * @throws OperationImpossible erreur dans l'enregistrement du client
 	 */
 	public void enregistrerOccupationChambreClient(final int idChambre, final int idClient, final int idBadge) throws OperationImpossible {
 		Optional<Chambre> chambre = chercherChambre(idChambre);
@@ -164,8 +164,8 @@ public class GestionClefsHotel {
 
 	/**
 	 * Libère une chambre du système.
-	 * @param idChambre
-	 * @throws OperationImpossible
+	 * @param idChambre identifiant de la chambre à libérer
+	 * @throws OperationImpossible erreur dans la libération de la chambre
 	 */
 	public void libererChambre(final int idChambre) throws OperationImpossible {
 		Optional<Chambre> chambre = chercherChambre(idChambre);
