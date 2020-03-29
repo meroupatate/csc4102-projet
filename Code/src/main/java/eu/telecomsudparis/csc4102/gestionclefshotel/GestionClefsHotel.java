@@ -152,6 +152,8 @@ public class GestionClefsHotel {
 			throw new ChaineDeCaracteresNullOuVide("nom ou prénom du client null ou vide non autorisé");
 		} else if (!chambre.isPresent()) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre inexistante");
+		} else if (chambre.get().getGraine() == null) {
+			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre aux attributs invalides");
 		} else if (chambre.get().getClient() != null || chambre.get().getBadge() != null) {
 			throw new OperationImpossible("impossible d'enregistrer l'occupation d'une chambre déjà occupée");
 		} else if (!badge.isPresent()) {

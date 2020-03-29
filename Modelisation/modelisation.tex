@@ -130,8 +130,7 @@ indiquons uniquement leur niveau de priorité.
 \begin{compactitem}
 \usecase{\haute}{Créer une chambre}
         %% précondition
-        {identifiant/code de la chambre bien formé (non \nullvalue et non
-          vide) $\land$ chambre avec cet identifiant inexistante $\land$
+        {identifiant de la chambre non nul $\land$ chambre avec cet identifiant inexistante $\land$
           graine pour la génération des clefs bien formée (non
           \nullvalue et non vide)}
         %% postcondition
@@ -149,7 +148,7 @@ indiquons uniquement leur niveau de priorité.
 
 \usecase{\haute}{Créer les badges d'accès}
         %% précondition
-        {identifiant du badge bien formé (non \nullvalue et non vide)}
+        {identifiant du badge non nul}
         %% postcondition
         {badge d'accès créé}
 
@@ -200,7 +199,7 @@ Numéro de test
 &1&2&3&4\\
 \hline
 \hline
-Identifiant/code de la chambre bien formé (non \nullvalue et non vide)
+Identifiant de la chambre non nul
 &F&T&T&T\\
 \hline
 Graine pour la génération des clefs bien formée ($\neq$ \nullvalue $\land$ $\neq$ vide)
@@ -234,7 +233,7 @@ Client existant dans le système
 Informations du client bien formées (non \nullvalue et non vide)
 & &F&T&T&T&T\\
 \hline
-Code de la chambre bien formé (non \nullvalue et non vide)
+Identifiant de la chambre non nul
 & & &F&T&T&T\\
 \hline
 Chambre existante avec ce code
@@ -249,7 +248,7 @@ Client enregistré dans la chambre
 \hline
 \hline
 Nombre de jeux de test
-&1&2xn&2&1&1&1\\
+&1&2&2&1&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~enregistrer l'occupation d'une chambre par un client~>>}
@@ -268,7 +267,7 @@ Client existant dans le système
 Informations du client bien formées (non \nullvalue et non vide)
 & &F&T&T&T&T\\
 \hline
-Code de la chambre bien formé (non \nullvalue et non vide)
+Identifiant de la chambre non nul
 & & &F&T&T&T\\
 \hline
 Chambre existante avec ce code
@@ -283,7 +282,7 @@ Chambre libérée
 \hline
 \hline
 Nombre de jeux de test
-&1&2xn&2&1&1&1\\
+&1&2&2&1&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~libérer une chambre~>>}
@@ -325,7 +324,7 @@ attributs:
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.5]{DiagrammesDeSequence/gestionclefshotel_uml_diag_seq_creer_chambre}
+\includegraphics[scale=0.4]{DiagrammesDeSequence/gestionclefshotel_uml_diag_seq_creer_chambre}
 \caption{Diagramme de séquence <<~créer une chambre~>>}
 \end{center}
 \label{umlet_diag_classes}
@@ -347,6 +346,7 @@ attributs:
 \label{umlet_diag_classes}
 \end{figure}
 
+\clearpage
 \newpage
 
 \section{Fiche des classes}
@@ -453,7 +453,7 @@ $+$ genereClef() : byte[] \\
 \label{umlet_diag_classes}
 \end{figure}
 
-\textbf{Invariant de la classe Badge:} (id $\neq \nullvalue \land \neg \emptyvalue$) \&\& $(/estAttribue \land premiereClef \neq \nullvalue \land secondeClef \neq \nullvalue)$  || $(/nonAttribue \land premiereClef = \nullvalue \land secondeClef = \nullvalue)$
+\textbf{Invariant de la classe Badge:} (id non nul) \&\& $(/estAttribue \land premiereClef \neq \nullvalue \land secondeClef \neq \nullvalue)$  || $(/nonAttribue \land premiereClef = \nullvalue \land secondeClef = \nullvalue)$
 
 \newpage
 
@@ -467,7 +467,7 @@ Numéro de test
 &1&2&3\\
 \hline
 \hline
-Identifiant du badge bien formé $\neq \nullvalue \land \neg \emptyvalue$
+Identifiant du badge non nul
 &F&T&T\\
 \hline
 Badge inexistant avec cet identifiant
@@ -491,7 +491,7 @@ Création du badge acceptée
 \hline
 \hline
 Nombre de jeux de test
-&2&1&1\\
+&1&1&1\\
 \hline
 \end{tabular}
 \end{center}

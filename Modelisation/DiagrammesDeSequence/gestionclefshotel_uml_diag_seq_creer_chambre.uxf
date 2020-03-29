@@ -124,7 +124,7 @@ c = rechercheChambre(id):Chambre</panel_attributes>
     </coordinates>
     <panel_attributes>opt
 --
-[id non null et non vide &amp;&amp; c = null
+[id non nul &amp;&amp; c = null
 &amp;&amp; graine non null et non vide]</panel_attributes>
     <additional_attributes/>
   </element>

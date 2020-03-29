@@ -38,9 +38,9 @@ fontsize=10
 +creerChambre(int id, String graine, int sel)
 +creerClient(int id, String nom, String prenom)
 +creerBadge(int id)
-+rechercheChambre(int id)
-+rechercheClient(int id)
-+rechercheBadge(int id)
++chercherChambre(int id)
++chercherClient(int id)
++chercherBadge(int id)
 +enregistrerOccupationChambreClient(int id_chambre, int id_client, int id_badge)
 +libererChambre(int id_chambre)</panel_attributes>
     <additional_attributes/>
@@ -97,8 +97,7 @@ _+clefToString(byte[] clef): String_</panel_attributes>
 +getSecondeClef()
 +liberer()
 +genereClef()
-+associerClient(Client client)
-+associerBadge(Badge badge)</panel_attributes>
++associerClientBadge(Client client, Badge badge)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

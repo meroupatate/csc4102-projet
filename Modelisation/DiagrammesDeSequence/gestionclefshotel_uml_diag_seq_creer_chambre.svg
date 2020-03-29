@@ -100,8 +100,8 @@
       /><path fill="none" d="M33.0135 0.5 L33.0135 13.9344 L24.0572 22.8906 L0.5 22.8906" clip-path="url(#clipPath4)"
       /><text x="5" font-size="14px" y="17.3906" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >opt</text
-      ><text x="207" font-size="14px" y="39.7812" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >[id non null et non vide &amp;&amp; c = null</text
+      ><text x="243" font-size="14px" y="39.7812" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >[id non nul &amp;&amp; c = null</text
       ><text x="218" font-size="14px" y="55.1719" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >&amp;&amp; graine non null et non vide]</text
     ></g

@@ -117,9 +117,10 @@ Votre projet avance bien, vous pouvez passer aux cas d'utilisation du sprint2. B
 ## Retours sur le suivi du 04/03
 - [x] les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ? 
 --> les identifiants sont des entiers dans le modèle et dans le code normalement, y a-t-il une incohérence que nous n'avons pas vue quelque part?
-  - [] je lis dans les préconditions de créer badge par exemple " identifiant du badge bien formé (non null et non vide)" ce qui correspond aux tests à faire pour une chaîne de caractères mais pas pour un entier, 
-  - [] idem dans les tables de décision des cas d'utilisation 
-  - [] idem dans les diagrammes de séquence 
+  - [x] je lis dans les préconditions de créer badge par exemple " identifiant du badge bien formé (non null et non vide)" ce qui correspond aux tests à faire pour une chaîne de caractères mais pas pour un entier, 
+  - [x] idem dans les tables de décision des cas d'utilisation 
+  - [x] idem dans les diagrammes de séquence
+  --> effectivement merci c'est corrigé
 
 ## Code 
 ### Module GestionClefsHotel
@@ -127,20 +128,20 @@ Votre projet avance bien, vous pouvez passer aux cas d'utilisation du sprint2. B
 - Classe GestionClefsHotel
   - UC1 "Créer une chambre" --> OK
   - UC2 "Enregistrer l'occupation d'une chambre par un client"
-    - [] Ne correspond pas au diagramme de séquence 
+    - [x] Ne correspond pas au diagramme de séquence 
   - UC3 "Libérer une chambre"
-    - [] Ne correspond pas au diagramme de séquence 
+    - [x] Ne correspond pas au diagramme de séquence 
 ### Tests
 #### Tests unitaires 
 - Badge Constructeur
-  - [] Ne correspond pas à la table de décision (4 tests et 2 dans l'implémentation) 
+  - [x] Ne correspond pas à la table de décision (4 tests et 2 dans l'implémentation)
 
 - Badge Est donné à un client -> OK 
 #### Tests de validation
 - UC1 "Créer une chambre"
-  - [] OK mais mettre en cohérence avec la table de décision 
+  - [x] OK mais mettre en cohérence avec la table de décision 
 - UC2 "Enregistrer l'occupation d'une chambre par un client"
   - [] Que veut dire le 2xn dans la table de validation ? 
-  - [] OK mais mettre en cohérence avec la table de décision 
+  - [x] OK mais mettre en cohérence avec la table de décision 
 - UC3 "Libérer une chambre"
-  - [] mettre en cohérence avec la table de décision 
+  - [x] mettre en cohérence avec la table de décision
