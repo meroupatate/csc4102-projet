@@ -12,7 +12,7 @@
       ><path d="M0 0 L0 40 L400 40 L400 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3"
-      ><path d="M0 0 L0 40 L250 40 L250 0 Z"
+      ><path d="M0 0 L0 40 L410 40 L410 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath4"
       ><path d="M0 0 L0 990 L550 990 L550 0 Z"
@@ -21,33 +21,55 @@
       ><path d="M0 0 L0 110 L100 110 L100 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath6"
-      ><path d="M0 0 L0 150 L140 150 L140 0 Z"
+      ><path d="M0 0 L0 250 L140 250 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath7"
-      ><path d="M0 0 L0 100 L140 100 L140 0 Z"
+      ><path d="M0 0 L0 200 L140 200 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath8"
-      ><path d="M0 0 L0 60 L140 60 L140 0 Z"
+      ><path d="M0 0 L0 150 L140 150 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M0 0 L0 50 L140 50 L140 0 Z"
+      ><path d="M0 0 L0 100 L140 100 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M0 0 L0 110 L140 110 L140 0 Z"
+      ><path d="M0 0 L0 60 L140 60 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
-      ><path d="M0 0 L0 40 L140 40 L140 0 Z"
+      ><path d="M0 0 L0 50 L140 50 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath12"
-      ><path d="M0 0 L0 80 L140 80 L140 0 Z"
+      ><path d="M0 0 L0 110 L140 110 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
-      ><path d="M0 0 L0 160 L140 160 L140 0 Z"
+      ><path d="M0 0 L0 40 L140 40 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
+      ><path d="M0 0 L0 80 L140 80 L140 0 Z"
+      /></clipPath
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
+      ><path d="M0 0 L0 160 L140 160 L140 0 Z"
+      /></clipPath
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath16"
       ><path d="M0 0 L0 130 L140 130 L140 0 Z"
       /></clipPath
     ></defs
+    ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,920)" stroke-opacity="0" stroke="rgb(255,255,255)"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
+    /></g
+    ><g transform="translate(190,920)"
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="50" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Déclaration de perte d'un badge avec remplacement</text
+    ></g
+    ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,870)" stroke-opacity="0" stroke="rgb(255,255,255)"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
+    /></g
+    ><g transform="translate(190,870)"
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="50" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Déclaration de perte d'un badge sans remplacement</text
+    ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,820)" stroke-opacity="0" stroke="rgb(255,255,255)"
     ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
     /></g
@@ -57,19 +79,19 @@
       >Effacer les clefs sur les badges d'accès rendus</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,770)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,770)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="34" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Enregistrer le départ d'un client</text
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="140" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Libérer une chambre</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,670)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,670)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="50" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="125" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Fournir les badges d'accès</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,720)" stroke-opacity="0" stroke="rgb(255,255,255)"
@@ -81,27 +103,27 @@
       >Enregistrer l'occupation d'une chambre par un client</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,620)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,620)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="49" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="124" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Créer les nouveaux clients</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,410)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,410)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="63" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="138" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Initialiser les serrures</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,140)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="204.25" ry="19.25" clip-path="url(#clipPath3)" cx="204.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,140)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="55" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="204.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="204.75" cy="19.75"
+      /><text x="135" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Créer les badges d'accès</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(170,10)" stroke-opacity="0" stroke="rgb(255,255,255)"
@@ -113,19 +135,19 @@
       >GestionClefsHôtel</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,90)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="204.25" ry="19.25" clip-path="url(#clipPath3)" cx="204.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,90)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="66" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="204.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="204.75" cy="19.75"
+      /><text x="146" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Retirer une chambre</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,570)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="199.25" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,570)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="69" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="199.25" fill="none" ry="19.25" clip-path="url(#clipPath2)" cx="199.75" cy="19.75"
+      /><text x="144" font-size="14px" y="24.6953" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Lister les chambres</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(0,400)" stroke-opacity="0" stroke="rgb(255,255,255)"
@@ -165,42 +187,48 @@
       >Administrateur</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(190,40)" stroke-opacity="0" stroke="rgb(255,255,255)"
-    ><ellipse rx="124.25" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75" stroke="none"
+    ><ellipse rx="204.25" ry="19.25" clip-path="url(#clipPath3)" cx="204.75" cy="19.75" stroke="none"
     /></g
     ><g transform="translate(190,40)"
-    ><ellipse rx="124.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="124.75" cy="19.75"
-      /><text x="69" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
+    ><ellipse rx="204.25" fill="none" ry="19.25" clip-path="url(#clipPath3)" cx="204.75" cy="19.75"
+      /><text x="149" font-size="14px" y="24.6953" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Créer une chambre</text
     ></g
     ><g transform="translate(70,710)"
-    ><path fill="none" d="M10.5 10.5 L120.5 130.5" clip-path="url(#clipPath6)"
+    ><path fill="none" d="M10.5 10.5 L120.5 230.5" clip-path="url(#clipPath6)"
     /></g
     ><g transform="translate(70,710)"
-    ><path fill="none" d="M10.5 10.5 L120.5 80.5" clip-path="url(#clipPath7)"
+    ><path fill="none" d="M10.5 10.5 L120.5 180.5" clip-path="url(#clipPath7)"
+    /></g
+    ><g transform="translate(70,710)"
+    ><path fill="none" d="M10.5 10.5 L120.5 130.5" clip-path="url(#clipPath8)"
+    /></g
+    ><g transform="translate(70,710)"
+    ><path fill="none" d="M10.5 10.5 L120.5 80.5" clip-path="url(#clipPath9)"
     /></g
     ><g transform="translate(70,680)"
-    ><path fill="none" d="M10.5 40.5 L120.5 10.5" clip-path="url(#clipPath8)"
+    ><path fill="none" d="M10.5 40.5 L120.5 10.5" clip-path="url(#clipPath10)"
     /></g
     ><g transform="translate(70,710)"
-    ><path fill="none" d="M10.5 10.5 L120.5 30.5" clip-path="url(#clipPath9)"
+    ><path fill="none" d="M10.5 10.5 L120.5 30.5" clip-path="url(#clipPath11)"
     /></g
     ><g transform="translate(70,630)"
-    ><path fill="none" d="M10.5 90.5 L120.5 10.5" clip-path="url(#clipPath10)"
+    ><path fill="none" d="M10.5 90.5 L120.5 10.5" clip-path="url(#clipPath12)"
     /></g
     ><g transform="translate(70,410)"
-    ><path fill="none" d="M10.5 20.5 L120.5 20.5" clip-path="url(#clipPath11)"
+    ><path fill="none" d="M10.5 20.5 L120.5 20.5" clip-path="url(#clipPath13)"
     /></g
     ><g transform="translate(70,140)"
-    ><path fill="none" d="M10.5 20.5 L120.5 20.5" clip-path="url(#clipPath11)"
+    ><path fill="none" d="M10.5 20.5 L120.5 20.5" clip-path="url(#clipPath13)"
     /></g
     ><g transform="translate(70,100)"
-    ><path fill="none" d="M10.5 60.5 L120.5 10.5" clip-path="url(#clipPath12)"
+    ><path fill="none" d="M10.5 60.5 L120.5 10.5" clip-path="url(#clipPath14)"
     /></g
     ><g transform="translate(70,580)"
-    ><path fill="none" d="M10.5 140.5 L120.5 10.5" clip-path="url(#clipPath13)"
+    ><path fill="none" d="M10.5 140.5 L120.5 10.5" clip-path="url(#clipPath15)"
     /></g
     ><g transform="translate(70,50)"
-    ><path fill="none" d="M10.5 110.5 L120.5 10.5" clip-path="url(#clipPath14)"
+    ><path fill="none" d="M10.5 110.5 L120.5 10.5" clip-path="url(#clipPath16)"
     /></g
   ></g
 ></svg

@@ -29,7 +29,7 @@ fontsize=10
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>140</y>
+      <y>150</y>
       <w>530</w>
       <h>190</h>
     </coordinates>
@@ -38,18 +38,21 @@ fontsize=10
 +creerChambre(int id, String graine, int sel)
 +creerClient(int id, String nom, String prenom)
 +creerBadge(int id)
-+chercherChambre(int id)
-+chercherClient(int id)
-+chercherBadge(int id)
++chercherChambre(int id_chambre)
++chercherClient(int id_client)
++chercherBadge(int id_badge)
++chercherChambreBadge(int id_badge)
 +enregistrerOccupationChambreClient(int id_chambre, int id_client, int id_badge)
-+libererChambre(int id_chambre)</panel_attributes>
++libererChambre(int id_chambre)
++declarerPerteBadgeSansRemplacement(int id_badge)
++declarerPerteBadgeAvecRemplacement(int id_badge)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>660</x>
-      <y>320</y>
+      <y>330</y>
       <w>30</w>
       <h>130</h>
     </coordinates>
@@ -61,7 +64,7 @@ m2=*</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>510</x>
-      <y>20</y>
+      <y>30</y>
       <w>350</w>
       <h>100</h>
     </coordinates>
@@ -77,7 +80,7 @@ _+clefToString(byte[] clef): String_</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>490</x>
-      <y>430</y>
+      <y>440</y>
       <w>370</w>
       <h>210</h>
     </coordinates>
@@ -104,9 +107,9 @@ _+clefToString(byte[] clef): String_</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1000</x>
-      <y>480</y>
+      <y>490</y>
       <w>290</w>
-      <h>120</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Client
 --
@@ -124,29 +127,32 @@ _+clefToString(byte[] clef): String_</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>450</y>
+      <y>460</y>
       <w>330</w>
-      <h>170</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>Badge
 --
 - id: int
 - premiereClef: byte[]
 - secondeClef: byte[]
+- perdu: boolean
 --
 +constructeur(int id)
 +getId()
 +getPremiereClef()
 +getSecondeClef()
++estPerdu()
 +inscrireClefs(byte[] premiereClef, byte[] secondeClef)
-+effacerClefs()</panel_attributes>
++effacerClefs()
++declarerPerte()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>140</x>
-      <y>170</y>
+      <y>180</y>
       <w>300</w>
       <h>300</h>
     </coordinates>
@@ -158,7 +164,7 @@ m2=*</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>940</x>
-      <y>180</y>
+      <y>190</y>
       <w>200</w>
       <h>320</h>
     </coordinates>
@@ -170,7 +176,7 @@ m2=*</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>350</x>
-      <y>490</y>
+      <y>500</y>
       <w>160</w>
       <h>40</h>
     </coordinates>
@@ -183,7 +189,7 @@ est ouverte par
     <id>Relation</id>
     <coordinates>
       <x>850</x>
-      <y>500</y>
+      <y>510</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
