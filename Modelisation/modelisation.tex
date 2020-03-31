@@ -203,7 +203,7 @@ Création acceptée
 \hline
 \hline
 Nombre de jeux de test
-&2&2&1&1\\
+&1&2&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~créer une chambre~>>}
@@ -216,10 +216,10 @@ Numéro de test
 &1&2&3&4&5&6\\
 \hline
 \hline
-Client existant dans le système
+Identifiant du client non nul
 &F&T&T&T&T&T\\
 \hline
-Informations du client bien formées (non \nullvalue et non vide)
+Client existant dans le système
 & &F&T&T&T&T\\
 \hline
 Identifiant de la chambre non nul
@@ -237,7 +237,7 @@ Client enregistré dans la chambre
 \hline
 \hline
 Nombre de jeux de test
-&1&2&2&1&1&1\\
+&1&1&1&1&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~enregistrer l'occupation d'une chambre par un client~>>}
@@ -247,31 +247,25 @@ Nombre de jeux de test
 \begin{tabular}{|p{0.6\linewidth}|c|c|c|c|c|c|}
 \hline
 Numéro de test
-&1&2&3&4&5&6\\
+&1&2&3&4\\
 \hline
-\hline
-Client existant dans le système
-&F&T&T&T&T&T\\
-\hline
-Informations du client bien formées (non \nullvalue et non vide)
-& &F&T&T&T&T\\
 \hline
 Identifiant de la chambre non nul
-& & &F&T&T&T\\
+&F&T&T&T\\
 \hline
-Chambre existante avec ce code
-& & & &F&T&T\\
+Chambre existante avec cet identifiant
+& &F&T&T\\
 \hline
-Chambre avec ce code occupée par ce client
-& & & & &F&T\\
+Chambre avec cet identifiant bien occupée
+& & &F&T\\
 \hline
 \hline
 Chambre libérée
-&F&F&F&F&F&T\\
+&F&F&F&T\\
 \hline
 \hline
 Nombre de jeux de test
-&1&2&2&1&1&1\\
+&1&1&1&1\\
 \hline
 \end{tabular}
 \caption{Cas d'utilisation <<~libérer une chambre~>>}

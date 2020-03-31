@@ -179,11 +179,12 @@ public class GestionClefsHotel {
 	 */
 	public void libererChambre(final int idChambre) throws OperationImpossible {
 		Optional<Chambre> chambre = chercherChambre(idChambre);
-		Optional<Badge> badge = Optional.ofNullable(chambre.get().getBadge());
-		Optional<Client> client = Optional.ofNullable(chambre.get().getClient());
 		if (!chambre.isPresent()) {
 			throw new OperationImpossible("impossible de libérer une chambre inexistante");
-		} else if (!badge.isPresent() || !client.isPresent()) {
+		}
+		Optional<Badge> badge = Optional.ofNullable(chambre.get().getBadge());
+		Optional<Client> client = Optional.ofNullable(chambre.get().getClient());
+		if (!badge.isPresent() || !client.isPresent()) {
 			throw new OperationImpossible("impossible de libérer une chambre inoccupée");
 		}
 		chambre.get().liberer();
