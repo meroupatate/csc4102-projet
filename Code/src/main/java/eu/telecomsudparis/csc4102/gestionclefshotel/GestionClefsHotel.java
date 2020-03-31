@@ -37,7 +37,7 @@ public class GestionClefsHotel {
 
 	/**
 	 * teste si l'invariant est vérifié.
-	 * 
+	 *
 	 * @return true si l'invariant est vérifié.
 	 */
 	public boolean invariant() {
@@ -46,9 +46,10 @@ public class GestionClefsHotel {
 
 	/**
 	 * Crée une chambre dans le système avec un identifiant, une graine et un sel.
-	 * @param id identifiant de la chambre à créer
+	 *
+	 * @param id     identifiant de la chambre à créer
 	 * @param graine graine de la chambre à créer
-	 * @param sel sel de la chambre à créer
+	 * @param sel    sel de la chambre à créer
 	 * @throws OperationImpossible si la chambre n'existe pas.
 	 */
 	public void creerChambre(final int id, final String graine, final int sel) throws OperationImpossible {
@@ -64,8 +65,9 @@ public class GestionClefsHotel {
 
 	/**
 	 * Crée un client dans le système avec un identifiant, un nom et un prénom.
-	 * @param id identifiant du client à créer
-	 * @param nom nom du client à créer
+	 *
+	 * @param id     identifiant du client à créer
+	 * @param nom    nom du client à créer
 	 * @param prenom prénom du client à créer
 	 * @throws OperationImpossible erreur dans la création du client
 	 */
@@ -82,6 +84,7 @@ public class GestionClefsHotel {
 
 	/**
 	 * Crée un badge dans le système avec un identifiant.
+	 *
 	 * @param id identifiant du badge à créer
 	 * @throws OperationImpossible erreur dans la création du badge
 	 */
@@ -96,6 +99,7 @@ public class GestionClefsHotel {
 
 	/**
 	 * Recherche une chambre dans le système à partir d'un identifiant.
+	 *
 	 * @param id identifiant de la chambre à chercher
 	 * @return Optional qui contient la chambre.
 	 * @throws OperationImpossible quand l'identifiant recherché est nul
@@ -109,6 +113,7 @@ public class GestionClefsHotel {
 
 	/**
 	 * Recherche un client dans le système à partir d'un identifiant.
+	 *
 	 * @param id identifiant du client à chercher
 	 * @return Optional qui contient le client.
 	 * @throws OperationImpossible quand l'identifiant recherché est nul
@@ -122,6 +127,7 @@ public class GestionClefsHotel {
 
 	/**
 	 * Recherche un badge dans le système à partir d'un identifiant.
+	 *
 	 * @param id identifiant du badge à chercher
 	 * @return Optional qui contient le badge.
 	 * @throws OperationImpossible quand l'identifiant recherché est nul
@@ -137,9 +143,10 @@ public class GestionClefsHotel {
 	 * Enregistre l'occupation d'une chambre par un client.
 	 * Prend en arguments les identifiants de la chambre, du client et du badge.
 	 * Associe le client et le badge à la chambre.
+	 *
 	 * @param idChambre identifiant de la chambre à occuper
-	 * @param idClient identifiant du client à enregistrer
-	 * @param idBadge identifiant du badge à utiliser
+	 * @param idClient  identifiant du client à enregistrer
+	 * @param idBadge   identifiant du badge à utiliser
 	 * @throws OperationImpossible erreur dans l'enregistrement du client
 	 */
 	public void enregistrerOccupationChambreClient(final int idChambre, final int idClient, final int idBadge) throws OperationImpossible {
@@ -166,6 +173,7 @@ public class GestionClefsHotel {
 
 	/**
 	 * Libère une chambre du système.
+	 *
 	 * @param idChambre identifiant de la chambre à libérer
 	 * @throws OperationImpossible erreur dans la libération de la chambre
 	 */
@@ -180,6 +188,66 @@ public class GestionClefsHotel {
 		}
 		chambre.get().liberer();
 		badge.get().effacerClefs();
+	}
+
+	/**
+	 * Déclare la perte d'un badge sans remplacement.
+	 *
+	 * @param idBadge identifiant du badge perdu
+	 * @throws OperationImpossible erreur dans la déclaration de perte
+	 */
+	public void declarerPerteBadgeSansRemplacement(final int idBadge) throws OperationImpossible {
+		Optional<Badge> badge = chercherBadge(idBadge);
+		Optional<Chambre> chambre = chercherChambreBadge(idBadge);
+		if (!badge.isPresent()) {
+			throw new OperationImpossible("impossible de déclarer perdu un badge inexistant");
+		}
+		if (chambre.isPresent()) {
+		    libererChambre(chambre.get().getId());
+		}
+		badge.get().declarerPerte();
+	}
+
+	/**
+	 * Déclare la perte d'un badge avec remplacement.
+	 * @param idBadge identifiant du badge perdu
+	 * @param idNouveauBadge identifiant du nouveau badge à attribuer
+	 * @throws OperationImpossible erreur dans la déclaration de perte
+	 */
+	public void declarerPerteBadgeAvecRemplacement(final int idBadge, final int idNouveauBadge) throws OperationImpossible {
+		Optional<Badge> badge = chercherBadge(idBadge);
+		Optional<Chambre> chambre = chercherChambreBadge(idBadge);
+		Optional<Badge> nouveauBadge = Optional.ofNullable(badges.get(idNouveauBadge));
+		if (!badge.isPresent()) {
+			throw new OperationImpossible("impossible de déclarer perdu un badge inexistant");
+		} else if (!chambre.isPresent()) {
+			throw new OperationImpossible("impossible de remplacer un badge non attribué");
+		} else if (!nouveauBadge.isPresent()) {
+			throw new OperationImpossible("impossible d'effectuer le remplacement car le nouveau badge n'existe pas");
+		} else if (nouveauBadge.get().estPerdu()) {
+			throw new OperationImpossible("impossible d'effectuer le remplacement car le nouveau badge est marqué comme perdu");
+		} else if (nouveauBadge.get().getPremiereClef() != null || nouveauBadge.get().getSecondeClef() != null) {
+			throw new OperationImpossible("impossible d'effectuer le remplacement car le nouveau badge est déjà utilisé");
+		}
+		libererChambre(chambre.get().getId());
+		enregistrerOccupationChambreClient(chambre.get().getId(), chambre.get().getClient().getId(), idNouveauBadge);
+		badge.get().declarerPerte();
+	}
+
+	/**
+	 * Recherche une chambre associée à un certain badge.
+	 *
+	 * @param idBadge identifiant du badge
+	 * @return Optional qui contient la chambre ou null si celle-ci n'existe pas
+	 */
+	private Optional<Chambre> chercherChambreBadge(final int idBadge) {
+		Optional<Chambre> chambre = null;
+		for (Chambre c : chambres.values()) {
+			if (c.getBadge().getId() == idBadge) {
+				chambre = Optional.ofNullable(c);
+			}
+		}
+		return chambre;
 	}
 }
 

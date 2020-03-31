@@ -21,6 +21,10 @@ public class Badge {
 	 * Seconde clef du badge.
 	 */
 	private byte[] secondeClef;
+	/**
+	 * Indique si le badge est perdu.
+	 */
+	private boolean perdu;
 
 	/**
 	 * Constructeur de la classe Badge avec un identifiant non nul.
@@ -32,6 +36,7 @@ public class Badge {
 			throw new ChaineDeCaracteresNullOuVide("identifiant nul non autorisé");
 		}
 		this.id = id;
+		this.perdu = false;
 		assert invariant();
 	}
 
@@ -92,6 +97,21 @@ public class Badge {
 			return null;
 		}
 		return this.secondeClef.clone();
+	}
+
+	/**
+	 * Déclare le badge comme perdu.
+	 */
+	public void declarerPerte() {
+		this.perdu = true;
+	}
+
+	/**
+	 * Vérifie si le badge est perdu.
+	 * @return boolean true si le badge est perdu et false sinon
+	 */
+	public boolean estPerdu() {
+		return this.perdu;
 	}
 
 	@Override
