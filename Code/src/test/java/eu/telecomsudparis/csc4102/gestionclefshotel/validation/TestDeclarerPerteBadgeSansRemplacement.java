@@ -13,7 +13,7 @@ public class TestDeclarerPerteBadgeSansRemplacement {
 
     @Before
     public void setUp() throws OperationImpossible {
-        systeme = new GestionClefsHotel();
+        systeme = GestionClefsHotel.getInstance();
         systeme.creerChambre(1, "graine", 0);
         systeme.creerClient(1, "jean", "michel");
         systeme.creerBadge(1);
@@ -22,7 +22,7 @@ public class TestDeclarerPerteBadgeSansRemplacement {
 
     @After
     public void tearDown() {
-        systeme = null;
+        systeme.reset();
     }
 
     @Test(expected = OperationImpossible.class)

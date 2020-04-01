@@ -13,7 +13,7 @@ public class TestLibererChambre {
 
     @Before
     public void setUp() throws OperationImpossible {
-        systeme = new GestionClefsHotel();
+        systeme = GestionClefsHotel.getInstance();
         systeme.creerChambre(1, "graine1", 0);
         systeme.creerChambre(2, "graine2", 0);
         systeme.creerClient(1, "jean", "michel");
@@ -23,7 +23,7 @@ public class TestLibererChambre {
 
     @After
     public void tearDown() {
-        systeme = null;
+        systeme.reset();
     }
 
     @Test(expected = OperationImpossible.class)
