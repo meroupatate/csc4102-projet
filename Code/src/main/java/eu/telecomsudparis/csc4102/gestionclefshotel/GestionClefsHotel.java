@@ -5,6 +5,7 @@ import eu.telecomsudparis.csc4102.util.OperationImpossible;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.SubmissionPublisher;
 
 /**
  * Cette classe définit la façade du système de gestion des clefs de l'hôtel.
@@ -25,6 +26,10 @@ public class GestionClefsHotel {
 	 * Collection de chambres du système.
 	 */
 	private Map<Integer, Chambre> chambres;
+	/**
+	 * Producteur.
+	 */
+	private SubmissionPublisher<String> producteur;
 
 	/**
 	 * Constructeur de la façade du système de gestion des clefs de l'hotel.
@@ -61,6 +66,13 @@ public class GestionClefsHotel {
 			throw new OperationImpossible("impossible de créer la chambre avec un identifiant déjà utilisé");
 		}
 		chambres.put(id, new Chambre(id, graine, sel));
+		byte[] pClef = chambres.get(id).getPremiereClef();
+		byte[] sClef = chambres.get(id).getSecondeClef();
+		for (Chambre c : chambres.values()) {
+			if (pClef == c.getPremiereClef() || pClef == c.getSecondeClef() || sClef == c.getPremiereClef() || sClef == c.getSecondeClef()) {
+			    producteur.submit("doublon de clés avec la chambre " + c.getId() + " détecté lors de la création de la chambre " + id);
+            }
+		}
 	}
 
 	/**
@@ -169,6 +181,11 @@ public class GestionClefsHotel {
 		chambre.get().associerClientBadge(client.get(), badge.get());
 		byte[] nouvelleClef = Util.genererUneNouvelleClef(chambre.get().getGraine(), String.format("%010d%n", chambre.get().getSel()));
 		badge.get().inscrireClefs(chambre.get().getSecondeClef(), nouvelleClef);
+		for (Chambre c : chambres.values()) {
+			if (nouvelleClef == c.getPremiereClef() || nouvelleClef == c.getSecondeClef()) {
+				producteur.submit("doublon de clés avec la chambre " + c.getId() + " détecté lors de la génération d'une nouvelle clé pour le badge " + idBadge);
+			}
+		}
 	}
 
 	/**
