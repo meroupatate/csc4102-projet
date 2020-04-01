@@ -28,9 +28,9 @@ fontsize=10
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
-      <y>150</y>
-      <w>530</w>
+      <x>390</x>
+      <y>130</y>
+      <w>670</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>GestionClefsHotel
@@ -51,20 +51,20 @@ fontsize=10
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>330</y>
+      <x>730</x>
+      <y>310</y>
       <w>30</w>
-      <h>130</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=*</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
-      <y>30</y>
+      <x>550</x>
+      <y>20</y>
       <w>350</w>
       <h>100</h>
     </coordinates>
@@ -79,10 +79,10 @@ _+clefToString(byte[] clef): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>440</y>
-      <w>370</w>
-      <h>210</h>
+      <x>630</x>
+      <y>410</y>
+      <w>220</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>Chambre
 --
@@ -106,9 +106,9 @@ _+clefToString(byte[] clef): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1000</x>
-      <y>490</y>
-      <w>290</w>
+      <x>950</x>
+      <y>410</y>
+      <w>210</w>
       <h>130</h>
     </coordinates>
     <panel_attributes>Client
@@ -126,9 +126,9 @@ _+clefToString(byte[] clef): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>460</y>
-      <w>330</w>
+      <x>290</x>
+      <y>410</y>
+      <w>240</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>Badge
@@ -151,51 +151,212 @@ _+clefToString(byte[] clef): String_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>180</y>
-      <w>300</w>
-      <h>300</h>
+      <x>450</x>
+      <y>310</y>
+      <w>30</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
 m2=*</panel_attributes>
-    <additional_attributes>280.0;10.0;10.0;10.0;10.0;280.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>190</y>
-      <w>200</w>
-      <h>320</h>
+      <x>1000</x>
+      <y>310</y>
+      <w>30</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=*</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;10.0;180.0;300.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>500</y>
-      <w>160</w>
+      <x>520</x>
+      <y>440</y>
+      <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
 est ouverte par
 0..n            0..1</panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>850</x>
-      <y>510</y>
-      <w>170</w>
+      <x>840</x>
+      <y>440</y>
+      <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
 est occupée par
 0..1             0..1</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>160</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>template=String 
+SubmissionPublisher
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>190</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>50</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>template=String
+&lt;&lt;interface&gt;&gt;
+Publisher
+--
++subscribe(Subscriber)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>160</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>template=String 
+BufferedSubscription
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>190</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=*</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>110</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>20</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>template=String
+&lt;&lt;interface&gt;&gt;
+Subscription
+--
++request(long n)
++cancel()
++doOffer(T)
++onComplete()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>110</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>290</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>template=String
+&lt;&lt;interface&gt;&gt;
+Subscriber
+--
++onSubscribe(Subscription)
++onNext(P)
++doError(Throwable)
++onComplete()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>220</y>
+      <w>80</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1
+est attaché à</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>300</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>template=String 
+Consommateur
+--
+- id: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>340</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
   </element>
 </diagram>
