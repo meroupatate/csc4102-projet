@@ -312,7 +312,7 @@ Nombre de jeux de test
 relecture de l'étude de cas, voici la liste de classes avec quelques
 attributs:
 \begin{compactitem}
-\item \textsf{GestionClefsHotel} (la façade),
+\item \textsf{GestionClefsHotel} (la façade) instance,
 \item \textsf{Util} (classe utilitaire déjà programmée)~---~'attribut
   de classe \textsf{TAILLE\_CLEF}, méthodes de classe
   \textsf{genererUneNouvelleClef} et \textsf{clefToString}),
@@ -386,10 +386,12 @@ attributs:
 $-$ chambres : collection de @Chambre \\
 $-$ clients : collection de @Client \\
 $-$ badges : collection de @Badge \\
+$-$ instance : GestionClefsHotel
 \hline
 \cmt{constructeur} \\
-$+$ GestionClefsHotel()\\
-%$+$ destructeur()\\
+$-$ GestionClefsHotel()\\
+$+$ getInstance() : GestionClefsHotel\\
+$+$ reset()\\
 $+$ invariant() : booléen\\
 \cmt{operations <<~cas d'utilisation~>>} \\
 $+$ créerChambre(int id, String graine, int sel) \\
@@ -407,6 +409,8 @@ $+$ chercherChambreBadge(int id\_badge) : Chambre \\
 \hline
 \end{longtable}%)
 \end{center}
+\clearpage
+\newpage
 
 \subsection{Classe \textsf{Badge}}
 
@@ -436,6 +440,8 @@ $+$ déclarerPerte() \\
 \hline
 \end{longtable}
 \end{center}
+\clearpage
+\newpage
 
 \subsection{Classe \textsf{Chambre}}
 
