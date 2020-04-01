@@ -63,7 +63,7 @@ Bon travail avec des précisions à apporter et à achever.
 - [x] Fiche des classes
     - [x] Je n'ai pas regardé en détail mais cela me semble sur la bonne voie
     - [x] "au plus une clé" -> que voulez-vous indiquer?
-    --> on voulait indiquer qu'il était possible qu'il y ait zéro ou une clé mais finalement il y a toujours une clé donc on a enlevé la précision inutile 
+    --> on voulait indiquer qu'il était possible qu'il y ait zéro ou une clé mais finalement il y a toujours une clé donc on a enlevé la précision inutile
 - [x] Diagramme de machine à états
     - [x] Pour badge, il manque l'état "en destruction"
     --> ajout de l'état "en destruction"
@@ -73,14 +73,14 @@ Bon travail avec des précisions à apporter et à achever.
 # Suivi du mer. 04 mars 2020 10:53:57 CET
 Chantal Taconet
 
-Bon travail, penser à mettre en cohérence la modélisation et le code. 
+Bon travail, penser à mettre en cohérence la modélisation et le code.
 
 ## Git
 ## Modélisation
 ### Diagramme de classes
 - [x] Revoir le formalisme des classes d'association (pour le trio Chambre-Badge-Clé)
 - [x] Composition (losange noir) ne peut pas être utilisé pour la classe Badge qui est connu par GestionClefsHotel et Badge : préférer une agrégation simple (losange vide)
---> ok agrégation simple pour la classe Badge 
+--> ok agrégation simple pour la classe Badge
 - [x] Attribut clé de Badge et Chambre sont redondants avec l'association avec une clé (lorsqu'il y a une association, on n'écrit pas l'attribut dans la classe, l'attribut est implicite et existera dans la classe java)
 --> association retirée car pas de classe Clef dans le code
 
@@ -88,12 +88,12 @@ Bon travail, penser à mettre en cohérence la modélisation et le code.
 - LibererChambre
   - [x] comment connaissez-vous l'identifiant d'un badge ?
   --> effectivement le badge est connu grâce à l'attribut badge dans l'objet chambre, diagramme de séquence modifié en conséquence
-  
+
 ### Tests unitaires
 - [x] Pourquoi n tests lorsque le badge est inexistant ?
 --> ok: une seule recherche est nécessaire pour voir si le badge avec le bon identifiant existe
 
-## Code 
+## Code
 
 - [x] Pour assurer le principe d'encapsulation, les attributs de classe doivent être private
 --> ok: ajout des méthodes get<Attribut> en conséquence
@@ -103,45 +103,49 @@ Bon travail, penser à mettre en cohérence la modélisation et le code.
 --> le sel n'était en effet pas incrémenté lors de la génération de la seconde clé dans le constructeur de Chambre, on a introduit une méthode Chambre.genereClef afin de palier à ce problème et de ne pas oublier d'incrémenter le sel dans le futur si besoin
 
 ### Cohérence avec la modélisation
-- [x] La classe Clé du diagramme de classes n'apparaît pas dans le Code 
+- [x] La classe Clé du diagramme de classes n'apparaît pas dans le Code
 --> classe Clé supprimée du diagramme
-- [x] les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ? 
+- [x] les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ?
 --> les identifiants sont des entiers dans le modèle et dans le code normalement, y a-t-il une incohérence que nous n'avons pas vue quelque part?
 ---
 
 # Suivi du mar. 17 mars 2020 20:14:08 CET
 Chantal Taconet
 
-Votre projet avance bien, vous pouvez passer aux cas d'utilisation du sprint2. Bonne continuation. 
+Votre projet avance bien, vous pouvez passer aux cas d'utilisation du sprint2. Bonne continuation.
 
 ## Retours sur le suivi du 04/03
-- [x] les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ? 
+- [x] les identifiants sont ils des chaînes (comme prévu dans le modèle ou des entiers comme dans le code ?
 --> les identifiants sont des entiers dans le modèle et dans le code normalement, y a-t-il une incohérence que nous n'avons pas vue quelque part?
-  - [x] je lis dans les préconditions de créer badge par exemple " identifiant du badge bien formé (non null et non vide)" ce qui correspond aux tests à faire pour une chaîne de caractères mais pas pour un entier, 
-  - [x] idem dans les tables de décision des cas d'utilisation 
+  - [x] je lis dans les préconditions de créer badge par exemple " identifiant du badge bien formé (non null et non vide)" ce qui correspond aux tests à faire pour une chaîne de caractères mais pas pour un entier,
+  - [x] idem dans les tables de décision des cas d'utilisation
   - [x] idem dans les diagrammes de séquence
   --> effectivement merci c'est corrigé
 
-## Code 
+## Code
 ### Module GestionClefsHotel
-- Traduction des associations en atribut : OK 
+- Traduction des associations en atribut : OK
 - Classe GestionClefsHotel
   - UC1 "Créer une chambre" --> OK
   - UC2 "Enregistrer l'occupation d'une chambre par un client"
-    - [x] Ne correspond pas au diagramme de séquence 
+    - [x] Ne correspond pas au diagramme de séquence
   - UC3 "Libérer une chambre"
-    - [x] Ne correspond pas au diagramme de séquence 
+    - [x] Ne correspond pas au diagramme de séquence
 ### Tests
-#### Tests unitaires 
+#### Tests unitaires
 - Badge Constructeur
   - [x] Ne correspond pas à la table de décision (4 tests et 2 dans l'implémentation)
 
-- Badge Est donné à un client -> OK 
+- Badge Est donné à un client -> OK
 #### Tests de validation
 - UC1 "Créer une chambre"
-  - [x] OK mais mettre en cohérence avec la table de décision 
+  - [x] OK mais mettre en cohérence avec la table de décision
 - UC2 "Enregistrer l'occupation d'une chambre par un client"
-  - [] Que veut dire le 2xn dans la table de validation ? 
-  - [x] OK mais mettre en cohérence avec la table de décision 
+  - [] Que veut dire le 2xn dans la table de validation ?
+  - [x] OK mais mettre en cohérence avec la table de décision
 - UC3 "Libérer une chambre"
   - [x] mettre en cohérence avec la table de décision
+---
+
+# Question pour le dernier suivi:
+-> On rencontre un problème au niveau de l'insersion du patron de conception Singleton: on nous dit dans le sujet du TP d'ajouter "les classes ClefVide et PaireDeClefsVides qui sont des classes enfants des classes Clef et PaireDeClef". Que peut-on faire si nous n'avons jamais introduit de classes Clef et PaireDeClefs dans notre modélisation? Merci d'avance pour le suivi!
