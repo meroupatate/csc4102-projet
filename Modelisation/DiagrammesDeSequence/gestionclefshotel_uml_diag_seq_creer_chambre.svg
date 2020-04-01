@@ -66,7 +66,7 @@
       ><path d="M0 0 L0 40 L240 40 L240 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M0 0 L0 60 L280 60 L280 0 Z"
+      ><path d="M0 0 L0 60 L260 60 L260 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M0 0 L0 70 L30 70 L30 0 Z"
@@ -178,7 +178,7 @@
     /></g
     ><g transform="translate(540,420)"
     ><path fill="none" d="M239.5 20.5 L10.5 20.5" clip-path="url(#clipPath17)"
-      /><path d="M228.7417 14 L240 20.5 L228.7417 27 Z" clip-path="url(#clipPath17)" stroke="none"
+      /><path fill="white" d="M228.7417 14 L240 20.5 L228.7417 27 Z" clip-path="url(#clipPath17)" stroke="none"
       /><path fill="none" d="M228.7417 14 L240 20.5 L228.7417 27 Z" clip-path="url(#clipPath17)"
       /><text x="86.3564" font-size="14px" y="16" clip-path="url(#clipPath17)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >secondeClef=</text
@@ -198,32 +198,32 @@
     /></g
     ><g transform="translate(540,360)"
     ><path fill="none" d="M239.5 20.5 L10.5 20.5" clip-path="url(#clipPath17)"
-      /><path d="M228.7417 14 L240 20.5 L228.7417 27 Z" clip-path="url(#clipPath17)" stroke="none"
+      /><path fill="white" d="M228.7417 14 L240 20.5 L228.7417 27 Z" clip-path="url(#clipPath17)" stroke="none"
       /><path fill="none" d="M228.7417 14 L240 20.5 L228.7417 27 Z" clip-path="url(#clipPath17)"
       /><text x="83.8442" font-size="14px" y="16" clip-path="url(#clipPath17)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >premiereClef=</text
       ><text x="22.7002" font-size="14px" y="31.3906" clip-path="url(#clipPath17)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >genererUneNouvelleClef(graine,sel)</text
     ></g
-    ><g transform="translate(270,310)"
+    ><g transform="translate(270,280)"
     ><path fill="none" d="M219.5 20.5 L10.5 20.5" clip-path="url(#clipPath20)"
-      /><path d="M208.7417 14 L220 20.5 L208.7417 27 Z" clip-path="url(#clipPath20)" stroke="none"
+      /><path fill="white" d="M208.7417 14 L220 20.5 L208.7417 27 Z" clip-path="url(#clipPath20)" stroke="none"
       /><path fill="none" d="M208.7417 14 L220 20.5 L208.7417 27 Z" clip-path="url(#clipPath20)"
       /><text x="24.2153" font-size="14px" y="16" clip-path="url(#clipPath20)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >«créerChambre(id, graine, sel)»</text
     ></g
     ><g transform="translate(270,170)"
-    ><path fill="none" d="M11.5 40.5 L60.5 40.5" clip-path="url(#clipPath21)"
-      /><path fill="none" d="M60.5 40.5 L60.5 10.5" clip-path="url(#clipPath21)"
-      /><path fill="none" d="M60.5 10.5 L10.5 10.5" clip-path="url(#clipPath21)"
-      /><path d="M22.2583 47 L11 40.5 L22.2583 34 Z" clip-path="url(#clipPath21)" stroke="none"
+    ><path fill="none" d="M11.5 40.5 L40.5 40.5" clip-path="url(#clipPath21)"
+      /><path fill="none" d="M40.5 40.5 L40.5 10.5" clip-path="url(#clipPath21)"
+      /><path fill="none" d="M40.5 10.5 L10.5 10.5" clip-path="url(#clipPath21)"
+      /><path fill="white" d="M22.2583 47 L11 40.5 L22.2583 34 Z" clip-path="url(#clipPath21)" stroke="none"
       /><path fill="none" d="M22.2583 47 L11 40.5 L22.2583 34 Z" clip-path="url(#clipPath21)"
-      /><text x="64" font-size="14px" y="32.6953" clip-path="url(#clipPath21)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >c = rechercheChambre(id):Chambre</text
+      /><text x="44" font-size="14px" y="32.6953" clip-path="url(#clipPath21)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >c = chercherChambre(id):Chambre</text
     ></g
     ><g transform="translate(70,130)"
     ><path fill="none" d="M189.5 20.5 L10.5 20.5" clip-path="url(#clipPath14)"
-      /><path d="M178.7417 14 L190 20.5 L178.7417 27 Z" clip-path="url(#clipPath14)" stroke="none"
+      /><path fill="white" d="M178.7417 14 L190 20.5 L178.7417 27 Z" clip-path="url(#clipPath14)" stroke="none"
       /><path fill="none" d="M178.7417 14 L190 20.5 L178.7417 27 Z" clip-path="url(#clipPath14)"
       /><text x="20.3169" font-size="14px" y="16" clip-path="url(#clipPath14)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >créerChambre(id,graine,sel)</text

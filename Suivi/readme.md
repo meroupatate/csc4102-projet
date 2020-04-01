@@ -153,13 +153,13 @@ Votre projet avance bien, vous pouvez passer aux cas d'utilisation du sprint2. B
 # Suivi du mer. 01 avril 2020 20:02:02 CEST
 Chantal Taconet
 
-Excellent travail complet ! 
+Excellent travail complet !
 Quelques remarques de forme sur les diagrammes de séquence
 
 ## Diagramme de séquence
-- [] Dans un DS les flêches pleines correspondent à une méthode asynchrone, pour les méthodes synchrones utilisées dans ce cours, ce sont des flêches vides
-- [] les rectangles blancs ne commencent qu'à réception des messages 
-- [] attention c.secondeClé (exemple parmi d'autres)  devrait correspondre à un message vers c 
+- [x] Dans un DS les flêches pleines correspondent à une méthode asynchrone, pour les méthodes synchrones utilisées dans ce cours, ce sont des flêches vides
+- [x] les rectangles blancs ne commencent qu'à réception des messages
+- [x] attention c.secondeClé (exemple parmi d'autres)  devrait correspondre à un message vers c
 
 
 ---

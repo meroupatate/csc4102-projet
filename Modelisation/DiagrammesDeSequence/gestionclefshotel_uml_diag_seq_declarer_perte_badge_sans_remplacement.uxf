@@ -71,9 +71,9 @@
     <id>UMLGeneric</id>
     <coordinates>
       <x>630</x>
-      <y>369</y>
+      <y>378</y>
       <w>18</w>
-      <h>36</h>
+      <h>27</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -86,7 +86,7 @@
       <w>288</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 declarerPerteBadgeSansRemplacement(idBadge)</panel_attributes>
     <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
   </element>
@@ -98,7 +98,7 @@ declarerPerteBadgeSansRemplacement(idBadge)</panel_attributes>
       <w>297</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 c = chercherChambreBadge(idBadge): Chambre</panel_attributes>
     <additional_attributes>10.0;30.0;40.0;30.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>
@@ -169,7 +169,7 @@ c = chercherChambreBadge(idBadge): Chambre</panel_attributes>
       <w>234</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 b = chercherBadge(idBadge): Badge</panel_attributes>
     <additional_attributes>10.0;30.0;40.0;30.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>
@@ -192,10 +192,10 @@ b = chercherBadge(idBadge): Badge</panel_attributes>
       <x>630</x>
       <y>108</y>
       <w>27</w>
-      <h>279</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -205,7 +205,7 @@ b = chercherBadge(idBadge): Badge</panel_attributes>
       <w>306</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 declarerPerte()
 </panel_attributes>
     <additional_attributes>320.0;20.0;10.0;20.0</additional_attributes>
@@ -214,7 +214,7 @@ declarerPerte()
     <id>Relation</id>
     <coordinates>
       <x>342</x>
-      <y>378</y>
+      <y>387</y>
       <w>306</w>
       <h>36</h>
     </coordinates>
@@ -230,7 +230,7 @@ declarerPerte()
       <w>162</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 libererChambre(c.id)</panel_attributes>
     <additional_attributes>10.0;30.0;40.0;30.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>

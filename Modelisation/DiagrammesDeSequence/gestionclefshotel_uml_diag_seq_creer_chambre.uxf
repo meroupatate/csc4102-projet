@@ -98,7 +98,7 @@ _: Chambre_</panel_attributes>
       <w>210</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 créerChambre(id,graine,sel)</panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
@@ -107,12 +107,12 @@ créerChambre(id,graine,sel)</panel_attributes>
     <coordinates>
       <x>270</x>
       <y>170</y>
-      <w>280</w>
+      <w>260</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-c = rechercheChambre(id):Chambre</panel_attributes>
-    <additional_attributes>10.0;40.0;60.0;40.0;60.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-
+c = chercherChambre(id):Chambre</panel_attributes>
+    <additional_attributes>10.0;40.0;40.0;40.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
@@ -143,11 +143,11 @@ c = rechercheChambre(id):Chambre</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>270</x>
-      <y>310</y>
+      <y>280</y>
       <w>240</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;créerChambre(id, graine, sel)&gt;&gt;</panel_attributes>
     <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
@@ -159,7 +159,7 @@ c = rechercheChambre(id):Chambre</panel_attributes>
       <w>260</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 premiereClef=
 genererUneNouvelleClef(graine,sel)</panel_attributes>
     <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
@@ -229,7 +229,7 @@ genererUneNouvelleClef(graine,sel)</panel_attributes>
       <w>260</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;-
 secondeClef=
 genererUneNouvelleClef(graine,sel)</panel_attributes>
     <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
