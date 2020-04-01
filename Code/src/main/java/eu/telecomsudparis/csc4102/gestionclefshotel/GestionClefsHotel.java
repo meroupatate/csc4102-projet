@@ -12,7 +12,7 @@ import java.util.concurrent.SubmissionPublisher;
  * 
  * @author Denis Conan
  */
-public class GestionClefsHotel {
+public final class GestionClefsHotel {
 
 	/**
 	 * Collection de clients du système.
@@ -39,6 +39,7 @@ public class GestionClefsHotel {
 	 * Constructeur de la façade du système de gestion des clefs de l'hotel.
 	 */
 	private GestionClefsHotel() {
+		producteur = new SubmissionPublisher<String>();
 		clients = new HashMap<>();
 		badges = new HashMap<>();
 		chambres = new HashMap<>();
@@ -48,7 +49,7 @@ public class GestionClefsHotel {
 	 * Crée une instance si aucune instance de la classe GestionClefsHotel n'existe.
 	 * @return GestionClefsHotel
 	 */
-	public static GestionClefsHotel getInstance() {
+	public static synchronized GestionClefsHotel getInstance() {
 		if (instance == null) {
 			instance = new GestionClefsHotel();
 		}
