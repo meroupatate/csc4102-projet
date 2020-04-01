@@ -149,3 +149,17 @@ Votre projet avance bien, vous pouvez passer aux cas d'utilisation du sprint2. B
 
 # Question pour le dernier suivi:
 -> On rencontre un problème au niveau de l'insersion du patron de conception Singleton: on nous dit dans le sujet du TP d'ajouter "les classes ClefVide et PaireDeClefsVides qui sont des classes enfants des classes Clef et PaireDeClef". Que peut-on faire si nous n'avons jamais introduit de classes Clef et PaireDeClefs dans notre modélisation? Merci d'avance pour le suivi!
+
+# Suivi du mer. 01 avril 2020 20:02:02 CEST
+Chantal Taconet
+
+Excellent travail complet ! 
+Quelques remarques de forme sur les diagrammes de séquence
+
+## Diagramme de séquence
+- [] Dans un DS les flêches pleines correspondent à une méthode asynchrone, pour les méthodes synchrones utilisées dans ce cours, ce sont des flêches vides
+- [] les rectangles blancs ne commencent qu'à réception des messages 
+- [] attention c.secondeClé (exemple parmi d'autres)  devrait correspondre à un message vers c 
+
+
+---
