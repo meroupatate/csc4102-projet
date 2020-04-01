@@ -25,7 +25,7 @@ final class Main {
 	 */
 	public static void main(final String[] args) throws Exception {
 		final int sel1 = 1337;
-		GestionClefsHotel gestionClefsHotel = new GestionClefsHotel();
+		GestionClefsHotel gestionClefsHotel = GestionClefsHotel.getInstance();
 		gestionClefsHotel.creerChambre(1, "poire Belle-Hélène", sel1);
 		gestionClefsHotel.creerClient(1, "Jean", "Michel");
 		gestionClefsHotel.creerBadge(1);
@@ -37,6 +37,7 @@ final class Main {
 		Optional<Badge> badge = gestionClefsHotel.chercherBadge(1);
 		gestionClefsHotel.enregistrerOccupationChambreClient(chambre.get().getId(), client.get().getId(), badge.get().getId());
 		System.out.println(chambre.get());
+		gestionClefsHotel.reset();
 	}
 
 }

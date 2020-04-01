@@ -30,14 +30,38 @@ public class GestionClefsHotel {
 	 * Producteur.
 	 */
 	private SubmissionPublisher<String> producteur;
+	/**
+	 * Instance accessible de la façade GestionClefsHotel.
+	 */
+	private static GestionClefsHotel instance;
 
 	/**
 	 * Constructeur de la façade du système de gestion des clefs de l'hotel.
 	 */
-	public GestionClefsHotel() {
+	private GestionClefsHotel() {
 		clients = new HashMap<>();
 		badges = new HashMap<>();
 		chambres = new HashMap<>();
+	}
+
+	/**
+	 * Crée une instance si aucune instance de la classe GestionClefsHotel n'existe.
+	 * @return GestionClefsHotel
+	 */
+	public static GestionClefsHotel getInstance() {
+		if (instance == null) {
+			instance = new GestionClefsHotel();
+		}
+		return instance;
+	}
+
+	/**
+	 * Permet de réinitialiser le singleton.
+	 */
+	public void reset() {
+		chambres.clear();
+		clients.clear();
+	    badges.clear();
 	}
 
 	/**
