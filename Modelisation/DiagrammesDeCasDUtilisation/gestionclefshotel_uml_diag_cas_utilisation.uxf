@@ -5,7 +5,7 @@
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>40</y>
+      <y>30</y>
       <w>410</w>
       <h>40</h>
     </coordinates>
@@ -16,18 +16,18 @@
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>50</y>
+      <y>40</y>
       <w>140</w>
       <h>130</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;110.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>
     <coordinates>
       <x>0</x>
-      <y>120</y>
+      <y>110</y>
       <w>100</w>
       <h>110</h>
     </coordinates>
@@ -38,7 +38,7 @@
     <id>UMLActor</id>
     <coordinates>
       <x>0</x>
-      <y>680</y>
+      <y>670</y>
       <w>100</w>
       <h>110</h>
     </coordinates>
@@ -49,7 +49,7 @@
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>580</y>
+      <y>570</y>
       <w>140</w>
       <h>160</h>
     </coordinates>
@@ -60,7 +60,7 @@
     <id>UMLActor</id>
     <coordinates>
       <x>0</x>
-      <y>400</y>
+      <y>390</y>
       <w>100</w>
       <h>110</h>
     </coordinates>
@@ -71,7 +71,7 @@
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>570</y>
+      <y>560</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -82,7 +82,7 @@
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>100</y>
+      <y>90</y>
       <w>140</w>
       <h>80</h>
     </coordinates>
@@ -93,7 +93,7 @@
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>90</y>
+      <y>80</y>
       <w>410</w>
       <h>40</h>
     </coordinates>
@@ -104,9 +104,9 @@
     <id>UMLGeneric</id>
     <coordinates>
       <x>170</x>
-      <y>10</y>
+      <y>0</y>
       <w>550</w>
-      <h>990</h>
+      <h>980</h>
     </coordinates>
     <panel_attributes>GestionClefsHôtel
 halign=left</panel_attributes>
@@ -116,7 +116,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>140</y>
+      <y>130</y>
       <w>410</w>
       <h>40</h>
     </coordinates>
@@ -127,7 +127,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>140</y>
+      <y>130</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -138,7 +138,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>410</y>
+      <y>400</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -149,7 +149,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>410</y>
+      <y>400</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -160,7 +160,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>620</y>
+      <y>610</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -171,7 +171,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>630</y>
+      <y>620</y>
       <w>140</w>
       <h>110</h>
     </coordinates>
@@ -182,7 +182,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>720</y>
+      <y>710</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -193,18 +193,18 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>710</y>
+      <y>700</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;120.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>670</y>
+      <y>660</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -215,7 +215,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>680</y>
+      <y>670</y>
       <w>140</w>
       <h>60</h>
     </coordinates>
@@ -226,7 +226,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>770</y>
+      <y>760</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -237,7 +237,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>710</y>
+      <y>700</y>
       <w>140</w>
       <h>100</h>
     </coordinates>
@@ -248,7 +248,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>820</y>
+      <y>810</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -259,7 +259,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>710</y>
+      <y>700</y>
       <w>140</w>
       <h>150</h>
     </coordinates>
@@ -270,7 +270,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>870</y>
+      <y>860</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -281,7 +281,7 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>710</y>
+      <y>700</y>
       <w>140</w>
       <h>200</h>
     </coordinates>
@@ -292,7 +292,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>190</x>
-      <y>920</y>
+      <y>910</y>
       <w>400</w>
       <h>40</h>
     </coordinates>
@@ -303,11 +303,33 @@ halign=left</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>710</y>
+      <y>700</y>
       <w>140</w>
       <h>250</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;120.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>200</x>
+      <y>180</y>
+      <w>400</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Notifier la présence d'un doublon de clés dans le système</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>140</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>130.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
