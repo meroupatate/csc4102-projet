@@ -163,3 +163,75 @@ Quelques remarques de forme sur les diagrammes de séquence
 
 
 ---
+
+------------------------------------
+mar. 14 avril 2020 14:21:56 CEST
+Denis Conan
+# Évaluation du logiciel livré à la fin du Sprint 2
+## Modélisation du logiciel
+- Spécification et préparation des tests de validation
+    - Diagrammes de cas d'utilisation = a
+    - Tables de décision de cas d'utilisation de priorité « haute » avec l'expression des préconditions et postconditions = a
+        - créer une chambre
+        - check-in
+        - check-out
+- Conception préliminaire
+    - Diagramme de classes, y compris avec l'insertion d'un patron de conception = a
+    - Diagrammes de séquence de cas d'utilisation développés dans la préparation des tests de validation = a
+        - créer une chambre
+        - check-in
+        - check-out
+        - déclarer la perte d'un badge, sans remplacement
+- Conception détaillée et de la préparation des tests unitaires
+    - Diagramme de machine à états et invariant = a-
+    - Tables de décision de tests unitaires = a
+        - constructeur de badge
+        - estDonneAUnClient ou équivalente
+## Programmation du logiciel
+- Utilisation des outils de programmation
+    - Module Maven et tests avec JUnit = a
+    - Documentation Javadoc et utilisation de Checkstyle = a
+    - Qualité du code en utilisant SpotBugs = a
+- Programmation de la solution
+    - Classes du diagramme de classes avec leurs attributs = a
+    - Méthodes des cas d'utilisation de base = a
+        - créer une chambre
+        - check-in
+        - check-out
+        - déclarer la perte d'un badge, sans remplacement
+        - déclarer la perte d'un badge, avec remplacement
+- Cohérence entre le code et le modèle
+    - Cohérences du code avec le diagramme de classes = a
+    - Cohérences du code avec les diagrammes de séquence de base = a
+        - créer une chambre
+        - check-in
+        - check-out
+        - déclarer la perte d'un badge, sans remplacement
+- Programmation et exécution des tests de validation et unitaires
+    - Tests de validation = a
+        - créer une chambre
+        - check-in
+        - check-out
+        - déclarer la perte d'un badge, sans remplacement
+        - déclarer la perte d'un badge, avec remplacement
+    - Tests unitaires = a
+        - constructeur de badge
+        - estDonneAUnClient ou équivalente
+- Patron de conception et idiome
+    - Application d'idiomes JAVA = a
+        - equals et hashCode
+        - toString
+        - Streams
+        - Optional
+    - Application de patrons de conception = a
+        - singleton
+        - publier-souscire
+
+
+----
+
+modélisation = min(4.0, (6 * 4 / 6) + (0 * 2 / 6) + (0 / 10) - (1 / 10)) = 3.90
+programmation, critères majeurs =  (8 * 4 / 8) + (0 * 2 / 8) + (0 / 10) - (0 / 10) = 4.00
+programmation, critères mineurs =  (0 * 4 / 8) + (0 * 2 / 8) = 0
+programmation = min(4.0, max(4.00 - 0, 0)) = 4.00
+projet = 3.90 + 4.00 = 7.90
