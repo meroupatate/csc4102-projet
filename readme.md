@@ -1,6 +1,6 @@
 Groupe:
-- Nom1 Prenom1 (to be adapted)
-- Nom2 Prenom2 (to be adapted)
+- Alice ZHEN
+- Aurélien DUBOC
 
 Copyright (C) 2016-2020
 Contact: Denis.Conan[at]telecom-sudparis.eu
@@ -25,7 +25,7 @@ $ export CLASSPATH=$JAVA_HOME/lib
 
 Before using the Maven module:
 ------------------------------
-Modify the line 
+Modify the line
 
 ~~~
 <artifactId>csc4102-prenom1Nom1-prenom2Nom2</artifactId>
