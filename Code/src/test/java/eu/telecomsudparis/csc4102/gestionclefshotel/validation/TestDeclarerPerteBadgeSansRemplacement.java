@@ -7,15 +7,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestLibererChambre {
+public class TestDeclarerPerteBadgeSansRemplacement {
 
     private GestionClefsHotel systeme;
 
     @Before
     public void setUp() throws OperationImpossible {
         systeme = GestionClefsHotel.getInstance();
-        systeme.creerChambre(1, "graine1", 0);
-        systeme.creerChambre(2, "graine2", 0);
+        systeme.creerChambre(1, "graine", 0);
         systeme.creerClient(1, "jean", "michel");
         systeme.creerBadge(1);
         systeme.enregistrerOccupationChambreClient(1, 1, 1);
@@ -27,26 +26,27 @@ public class TestLibererChambre {
     }
 
     @Test(expected = OperationImpossible.class)
-    public void libererChambreTest1Jeu1() throws Exception {
-        systeme.libererChambre(0);
+    public void declarerPerteBadgeSansRemplacementTest1Jeu1() throws Exception {
+        systeme.declarerPerteBadgeSansRemplacement(0);
     }
 
     @Test(expected = OperationImpossible.class)
-    public void libererChambreTest2Jeu1() throws Exception {
-        systeme.libererChambre(3);
-    }
-
-    @Test(expected = OperationImpossible.class)
-    public void libererChambreTest3Jeu1() throws Exception {
-        systeme.libererChambre(2);
+    public void declarerPerteBadgeSansRemplacementTest2Jeu1() throws Exception {
+        systeme.declarerPerteBadgeSansRemplacement(2);
     }
 
     @Test
-    public void libererChambreTest4Jeu1() throws Exception {
+    public void declarerPerteBadgeSansRemplacementTest3Jeu1() throws OperationImpossible {
         Assert.assertNotNull(systeme.chercherChambre(1).get().getBadge());
         Assert.assertNotNull(systeme.chercherChambre(1).get().getClient());
-        systeme.libererChambre(1);
+        Assert.assertNotNull(systeme.chercherBadge(1).get().getPremiereClef());
+        Assert.assertNotNull(systeme.chercherBadge(1).get().getSecondeClef());
+        Assert.assertFalse(systeme.chercherBadge(1).get().estPerdu());
+        systeme.declarerPerteBadgeSansRemplacement(1);
         Assert.assertNull(systeme.chercherChambre(1).get().getBadge());
         Assert.assertNull(systeme.chercherChambre(1).get().getClient());
+        Assert.assertNull(systeme.chercherBadge(1).get().getPremiereClef());
+        Assert.assertNull(systeme.chercherBadge(1).get().getSecondeClef());
+        Assert.assertTrue(systeme.chercherBadge(1).get().estPerdu());
     }
 }

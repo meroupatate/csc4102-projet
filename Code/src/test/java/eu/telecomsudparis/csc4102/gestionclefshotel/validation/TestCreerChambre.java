@@ -14,12 +14,12 @@ public class TestCreerChambre {
 
     @Before
     public void setUp() {
-        systeme = new GestionClefsHotel();
+        systeme = GestionClefsHotel.getInstance();
     }
 
     @After
     public void tearDown() {
-        systeme = null;
+        systeme.reset();
     }
 
     @Test(expected = ChaineDeCaracteresNullOuVide.class)
